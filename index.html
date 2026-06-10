@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RegieON - Procedimentos AV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Procedimentos AV</p>
+      <h1>RegieON</h1>
+      <p class="subtitle">Guia interativo para ligar uma régie passo a passo.</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="card hero-card">
+      <div>
+        <h2>Ligar Régie</h2>
+        <p>Segue os passos pela ordem indicada. Marca cada etapa como concluída.</p>
+      </div>
+      <div class="progress-box">
+        <span id="progressText">0%</span>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps" class="steps"></section>
+
+    <section class="card complete-card" id="completeCard">
+      <h2>Procedimento concluído</h2>
+      <p>Todos os passos foram marcados como concluídos.</p>
+      <button id="resetBtn">Reiniciar checklist</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>RegieON · Protótipo v1</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

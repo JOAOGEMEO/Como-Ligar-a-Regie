@@ -70,23 +70,14 @@ button {
     max-width:100%;
 }
 
-.ulht-logo{
-    width:clamp(64px, 8vw, 100px);
-    height:auto;
-    flex:0 0 auto;
-    display:block;
-    filter:drop-shadow(0 8px 18px rgba(0,0,0,.55));
-    
-}
+.logo-image{
 
-.DCAM-logo{
-   width:clamp(64px, 8vw, 120px);
-    height:auto;
-    flex:0 1 auto;
-    max-width:calc(100vw - 170px);
+    height:120px;
+
+    width:auto;
+
     display:block;
-    filter:drop-shadow(0 8px 18px rgba(0,0,0,.55));
-    margin-bottom: 20px;
+
 }
 
 .language-switcher{

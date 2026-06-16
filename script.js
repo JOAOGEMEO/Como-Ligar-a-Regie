@@ -947,3 +947,103 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   }
 });
+function openAboutModal() {
+
+    document
+
+        .getElementById("aboutModal")
+
+        .classList.add("show");
+
+}
+
+function closeAboutModal() {
+
+    document
+
+        .getElementById("aboutModal")
+
+        .classList.remove("show");
+
+}
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        closeAboutModal();
+
+    }
+
+});const aboutTexts = {
+
+    pt: `
+        <p class="eyebrow">Projeto</p>
+
+        <p>
+            O REGIE-ON é um guia interativo desenvolvido para apoiar a operação técnica da régie do Departamento de Cinema e Artes dos Media da Universidade Lusófona.
+        </p>
+
+        <h3>Histórico de versões</h3>
+
+        <ul class="version-list">
+            <li><strong>v1-v4</strong> — Estrutura inicial e protótipos.</li>
+            <li><strong>v5</strong> — Primeira versão profissional.</li>
+            <li><strong>v6</strong> — Procedimentos completos.</li>
+            <li><strong>v7</strong> — Melhorias de navegação.</li>
+            <li><strong>v8</strong> — Documento Work in Progress.</li>
+            <li><strong>v9</strong> — Streaming dedicado.</li>
+            <li><strong>v10</strong> — Estrutura centrada.</li>
+            <li><strong>v11</strong> — Melhorias organizacionais.</li>
+            <li><strong>v12</strong> — Consolidação técnica.</li>
+            <li><strong>v13</strong> — Sistema de imagens locais.</li>
+            <li><strong>v14</strong> — Português / Inglês.</li>
+            <li><strong>v15</strong> — Responsividade e identidade visual.</li>
+        </ul>
+    `,
+
+    en: `
+        <p class="eyebrow">Project</p>
+
+        <p>
+            REGIE-ON is an interactive guide developed to support technical operations within the control room of the Department of Cinema and Media Arts at Universidade Lusófona.
+        </p>
+
+        <h3>Version History</h3>
+
+        <ul class="version-list">
+            <li><strong>v1-v4</strong> — Initial structure and prototypes.</li>
+            <li><strong>v5</strong> — First professional version.</li>
+            <li><strong>v6</strong> — Complete control room procedures.</li>
+            <li><strong>v7</strong> — Navigation improvements.</li>
+            <li><strong>v8</strong> — Work in Progress documentation.</li>
+            <li><strong>v9</strong> — Dedicated Streaming workflow.</li>
+            <li><strong>v10</strong> — Centered layout.</li>
+            <li><strong>v11</strong> — Organizational improvements.</li>
+            <li><strong>v12</strong> — Technical documentation consolidation.</li>
+            <li><strong>v13</strong> — Local image support.</li>
+            <li><strong>v14</strong> — Portuguese / English support.</li>
+            <li><strong>v15</strong> — Responsive design and visual identity improvements.</li>
+        </ul>
+    `
+};
+
+function setAboutLanguage(lang){
+
+    document.getElementById("about-content").innerHTML =
+        aboutTexts[lang];
+
+    document.getElementById("about-pt")
+        .classList.toggle("active", lang === "pt");
+
+    document.getElementById("about-en")
+        .classList.toggle("active", lang === "en");
+}
+
+function openAboutModal(){
+
+    document.getElementById("aboutModal")
+        .classList.add("show");
+
+    setAboutLanguage("pt");
+}

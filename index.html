@@ -111,6 +111,16 @@
       <p class="email">joao.aguiar@ulusofona.pt</p>
     </div>
   </section>
+
+<footer class="footer">
+
+    <button class="version-badge" onclick="openAboutModal()">
+
+        REGIE-ON v15
+
+    </button>
+
+</footer>
 </main>
 
 <div id="imageModal" class="image-modal">
@@ -119,5 +129,48 @@
 </div>
 
 <script src="script.js"></script>
+<div id="aboutModal" class="about-modal">
+
+    <div class="about-content">
+
+        <button class="close-about" onclick="closeAboutModal()">
+
+            ×
+
+        </button>
+
+        <div class="about-header">
+
+            <h2>REGIE-ON v15</h2>
+
+            <div class="language-switcher about-language">
+
+                <button id="about-pt"
+
+                        class="active"
+
+                        onclick="setAboutLanguage('pt')">
+
+                    PT
+
+                </button>
+
+                <button id="about-en"
+
+                        onclick="setAboutLanguage('en')">
+
+                    EN
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="about-content"></div>
+
+    </div>
+
+</div>
 </body>
 </html>

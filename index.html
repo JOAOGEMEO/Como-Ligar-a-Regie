@@ -1,176 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>regie-on | Procedimentos Técnicos da Régie</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFO-ON | Procedimentos Técnicos</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 <main class="app">
-  <section class="hero" id="home">
-    <div class="hero-content">
-     <div class="brand">
-   <div class="brand">
-    <div class="header-top">
-
-        <img src="logo.jpg" alt="Logo" class="logo-image">
-
-    </div>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="header-top">
+<img src="assets/logos/logo.jpg" alt="INFO-ON" class="logo-image">
+<div class="language-switcher">
+<button id="lang-pt" onclick="setLanguage('pt')">PT</button>
+<button id="lang-en" onclick="setLanguage('en')">EN</button>
 </div>
-    <div class="language-switcher">
-          <button type="button" id="lang-pt" onclick="setLanguage('pt')">PT</button>
-          <button type="button" id="lang-en" onclick="setLanguage('en')">EN</button>
-        </div>
-      </div>
+</div>
+<h1>INFO<span>-</span>ON</h1>
+<p class="subtitle" data-i18n="subtitle">Plataforma de Procedimentos Técnicos do DCAM.</p>
+<div class="wip-notice"><strong data-i18n="wipTitle">Documento em work in progress</strong><span data-i18n="wipText">Esta plataforma está em desenvolvimento e será atualizada com novos procedimentos, imagens e validações técnicas.</span></div>
+<div class="main-sections">
+<button class="main-section-btn" onclick="openArea('estudios')"><span class="main-icon">🎬</span><span class="main-section-title" data-i18n="areaStudios">Regras dos Estúdios</span><span class="main-section-desc" data-i18n="areaStudiosDesc">Segurança · Reservas · Limpeza · Equipamentos</span></button>
+<button class="main-section-btn" onclick="openArea('regie')"><span class="main-icon">🎥</span><span class="main-section-title" data-i18n="areaRegie">Régie</span><span class="main-section-desc" data-i18n="areaRegieDesc">Arranque · Streaming · Encerramento</span></button>
+<button class="main-section-btn" onclick="openArea('vp')"><span class="main-icon">🕶️</span><span class="main-section-title" data-i18n="areaVP">VP - Produção Virtual</span><span class="main-section-desc" data-i18n="areaVPDesc">Produção virtual e estúdios virtuais</span></button>
+<button class="main-section-btn" onclick="openArea('videoteca')"><span class="main-icon">📚</span><span class="main-section-title" data-i18n="areaVideoteca">Videoteca</span><span class="main-section-desc" data-i18n="areaVideotecaDesc">Acesso a vídeos e referências técnicas</span></button>
+<button class="main-section-btn" onclick="openArea('reshape')"><span class="main-icon">🔧</span><span class="main-section-title" data-i18n="areaReshape">Reshape</span><span class="main-section-desc" data-i18n="areaReshapeDesc">Área preparada para novos procedimentos</span></button>
+</div>
+</div>
+</section>
 
-      <h1>REGIE<span>-</span>ON</h1>
-      <p class="subtitle" data-i18n="subtitle">Guia interativo para procedimentos técnicos da régie.</p>
+<section class="area hidden" id="area-estudios">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+    <h1 data-i18n="areaStudiosTitle">Regras - Estúdios</h1>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaStudios">Regras dos Estúdios</p><h2 data-i18n="generalProcedures">Procedimentos Gerais</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="procedure-grid">
+<article class="procedure-card active" onclick="openRule('seguranca')"><span class="tag red" data-i18n="security">Segurança</span><h3 data-i18n="security">Segurança</h3><p data-i18n="securityDesc">Regras essenciais de segurança, circulação, cabos e utilização responsável dos espaços.</p></article>
+<article class="procedure-card active" onclick="openRule('reservas')"><span class="tag blue" data-i18n="bookings">Reservas</span><h3 data-i18n="bookings">Reservas</h3><p data-i18n="bookingsDesc">Marcação, confirmação, utilização e cancelamento de espaços e equipamentos.</p></article>
+<article class="procedure-card active" onclick="openRule('limpeza')"><span class="tag green" data-i18n="cleaning">Limpeza</span><h3 data-i18n="cleaning">Limpeza</h3><p data-i18n="cleaningDesc">Organização, limpeza, arrumação e entrega dos estúdios após utilização.</p></article>
+<article class="procedure-card active" onclick="openRule('equipamentos')"><span class="tag orange" data-i18n="equipment">Equipamentos</span><h3 data-i18n="equipment">Equipamentos</h3><p data-i18n="equipmentDesc">Requisição, transporte, utilização, devolução e reporte de anomalias.</p></article>
+</div>
+</section>
 
-      <div class="wip-notice">
-        <strong data-i18n="wipTitle">Documento em work in progress</strong>
-        <span data-i18n="wipText">Este procedimento está em desenvolvimento e pode ser atualizado com novas instruções, fotos e validações técnicas.</span>
-      </div>
+<section class="area hidden" id="rule-view">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-header"><div><h3 class="section-page-title" data-i18n="areaStudiosTitle">Regras - Estúdios</h3><p class="eyebrow" data-i18n="areaStudios">Regras dos Estúdios</p><h2 id="rule-title">Segurança</h2></div><button class="back-btn small-btn" onclick="openArea('estudios')" data-i18n="backButton">← Voltar</button></div>
+<div id="rule-content" class="steps"></div>
+</section>
 
-      <div class="hero-actions">
-        <button class="primary-btn" onclick="openProcedure('ligar-regie')" data-i18n="startButton">Iniciar · Ligar a Régie</button>
-        <button class="secondary-btn" onclick="scrollToProcedures()" data-i18n="viewProcedures">Ver procedimentos</button>
-        <a class="link-btn" href="#sugestoes" data-i18n="suggestionsLink">Sugestões</a>
-      </div>
-    </div>
-  </section>
+<section class="area hidden" id="area-regie">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+    <h1 class="section-page-title" data-i18n="areaRegieTitle">Régie</h1>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaRegie">Régie</p><h2 data-i18n="regieProcedures">Procedimentos da Régie</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="procedure-grid">
+<article class="procedure-card active" onclick="openProcedure('ligar-regie')"><span class="tag green" data-i18n="startup">Arranque</span><h3 data-i18n="powerOnRegie">Ligar a Régie</h3><p data-i18n="powerOnRegieDesc">Sequência de arranque dos MDU, mesas, câmaras, CCU, áudio e intercoms.</p><div class="mini-progress"><span id="mini-ligar-regie"></span></div></article>
+<article class="procedure-card active" onclick="openProcedure('streaming')"><span class="tag blue" data-i18n="liveBadge">Live</span><h3 data-i18n="streamingTitle">Streaming</h3><p data-i18n="streamingDesc">Procedimento para iniciar e encerrar transmissão no PC das VT's.</p><div class="mini-progress"><span id="mini-streaming"></span></div></article>
+<article class="procedure-card active" onclick="openProcedure('desligar-regie')"><span class="tag red" data-i18n="shutdown">Encerramento</span><h3 data-i18n="powerOffRegie">Desligar a Régie</h3><p data-i18n="powerOffRegieDesc">Procedimento final em ordem inversa ao arranque.</p><div class="mini-progress"><span id="mini-desligar-regie"></span></div></article>
+<article class="procedure-card disabled"><span class="tag orange" data-i18n="support">Suporte</span><h3 data-i18n="commonProblems">Problemas Comuns</h3><p data-i18n="commonProblemsDesc">Diagnóstico de imagem, áudio, sinal, intercoms e fontes.</p></article>
+</div>
+</section>
 
-  <section class="procedures" id="procedures">
-    <div class="section-header">
-      <div>
-        <p class="eyebrow" data-i18n="proceduresEyebrow">Procedimentos</p>
-        <h2 data-i18n="operationTitle">Operação da Régie</h2>
-      </div>
-      <button class="small-btn" onclick="resetAllProgress()" data-i18n="clearProgress">Limpar progresso</button>
-    </div>
+<section class="procedure-view hidden" id="procedure-view">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="procedure-view-header"><h1 class="section-page-title" data-i18n="areaRegieTitle">Régie</h1></div>
+<div class="procedure-topbar"><button class="back-btn" onclick="closeProcedure()" data-i18n="backButton">← Voltar</button><div><p class="eyebrow" data-i18n="activeProcedure">Procedimento ativo</p><h2 id="procedure-title">Ligar a Régie</h2></div></div>
+<div class="status-panel"><div><strong id="progress-text">0% concluído</strong><p data-i18n="progressSaved">O progresso fica guardado neste dispositivo.</p></div><div class="progress-bar"><span id="progress-bar"></span></div></div>
+<div id="steps" class="steps"></div>
+<div class="finish-panel"><h3 data-i18n="finalValidation">Validação final</h3><p data-i18n="finalValidationText">Quando todos os passos estiverem concluídos, o procedimento fica validado.</p><button class="primary-btn" onclick="markAllDone()" data-i18n="markAllDone">Marcar tudo como concluído</button></div>
+</section>
 
-    <div class="procedure-grid">
-      <article class="procedure-card active" onclick="openProcedure('ligar-regie')">
-        <span class="tag green" data-i18n="tagStartup">Arranque</span>
-        <h3 data-i18n="cardPowerOnTitle">Ligar a Régie</h3>
-        <p data-i18n="cardPowerOnText">Sequência completa de arranque dos MDU, mesas, câmaras, CCU, áudio e intercoms.</p>
-        <div class="mini-progress"><span id="mini-ligar-regie"></span></div>
-      </article>
+<section class="area hidden" id="area-vp">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+    <h1 class="section-page-title" data-i18n="areaVPTitle">VP - Produção Virtual</h1>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaVP">VP - Produção Virtual</p><h2 data-i18n="areaVPDesc">Produção virtual e estúdios virtuais</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="wip-notice"><strong data-i18n="vpWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="vpWipText">Esta área receberá procedimentos e orientações para produção virtual.</span></div>
+</section>
 
-      <article class="procedure-card active" onclick="openProcedure('streaming')">
-        <span class="tag blue" data-i18n="tagLive">Live</span>
-        <h3 data-i18n="cardStreamingTitle">Streaming</h3>
-        <p data-i18n="cardStreamingText">Procedimento único para iniciar e encerrar a transmissão no PC das VT's.</p>
-        <div class="mini-progress"><span id="mini-streaming"></span></div>
-      </article>
+<section class="area hidden" id="area-videoteca">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+    <h1 class="section-page-title" data-i18n="areaVideotecaTitle">Videoteca</h1>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaVideoteca">Videoteca</p><h2 data-i18n="areaVideotecaDesc">Acesso a vídeos e referências técnicas</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="wip-notice"><strong data-i18n="vpWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="vpWipText">Esta área receberá procedimentos e orientações para produção virtual.</span></div>
+</section>
 
-      <article class="procedure-card disabled">
-        <span class="tag orange" data-i18n="tagSupport">Suporte</span>
-        <h3 data-i18n="cardProblemsTitle">Problemas Comuns</h3>
-        <p data-i18n="cardProblemsText">Diagnóstico de imagem, áudio, sinal, intercoms e fontes.</p>
-      </article>
+<section class="area hidden" id="area-reshape">
+<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+    <h1 class="section-page-title" data-i18n="areaReshape">Reshape</h1>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaReshape">Reshape</p><h2 data-i18n="areaReshapeDesc">Área preparada para novos procedimentos</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="status-panel"><strong data-i18n="reshapeInDevelopment">Área em desenvolvimento</strong><p data-i18n="reshapeText">Esta área está preparada para receber procedimentos próprios de Reshape.</p></div>
+</section>
 
-      <article class="procedure-card active end-card" onclick="openProcedure('desligar-regie')">
-        <span class="tag red" data-i18n="tagShutdown">Encerramento</span>
-        <h3 data-i18n="cardPowerOffTitle">Desligar a Régie</h3>
-        <p data-i18n="cardPowerOffText">Procedimento final, em ordem inversa ao arranque.</p>
-        <div class="mini-progress"><span id="mini-desligar-regie"></span></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="procedure-view hidden" id="procedure-view">
-    <div class="procedure-topbar">
-      <button class="back-btn" onclick="closeProcedure()" data-i18n="backButton">← Voltar</button>
-      <div>
-        <p class="eyebrow" data-i18n="activeProcedure">Procedimento ativo</p>
-        <h2 id="procedure-title">Ligar a Régie</h2>
-      </div>
-    </div>
-    <div class="status-panel">
-      <div>
-        <strong id="progress-text">0% concluído</strong>
-        <p data-i18n="progressSaved">O progresso fica guardado neste dispositivo.</p>
-      </div>
-      <div class="progress-bar"><span id="progress-bar"></span></div>
-    </div>
-    <div id="steps" class="steps"></div>
-    <div class="finish-panel">
-      <h3 data-i18n="finalValidation">Validação final</h3>
-      <p data-i18n="finalValidationText">Quando todos os passos estiverem concluídos, o procedimento fica validado.</p>
-      <button class="primary-btn" onclick="markAllDone()" data-i18n="markAllDone">Marcar tudo como concluído</button>
-    </div>
-  </section>
-
-  <section class="suggestions" id="sugestoes">
-    <div class="suggestions-card">
-      <p class="eyebrow" data-i18n="contribute">Contribuir</p>
-      <h2 data-i18n="suggestionsTitle">Sugestões e correções</h2>
-      <p class="suggestion-text" data-i18n="suggestionsText">Este documento encontra-se em desenvolvimento contínuo. Para sugerir melhorias ou reportar erros, contacte:</p>
-      <p class="email">joao.aguiar@ulusofona.pt</p>
-    </div>
-  </section>
-
-<footer class="footer">
-
-    <button class="version-badge" onclick="openAboutModal()">
-
-        REGIE-ON v15
-
-    </button>
-
-</footer>
+<section class="suggestions" id="sugestoes"><div class="suggestions-card"><p class="eyebrow" data-i18n="contribute">Contribuir</p><h2 data-i18n="suggestionsTitle">Sugestões e correções</h2><p class="suggestion-text" data-i18n="suggestionsText">Este documento encontra-se em desenvolvimento contínuo. Para sugerir melhorias ou reportar erros, contacte:</p><p class="email">joao.aguiar@ulusofona.pt</p></div></section>
+<footer class="footer"><button class="version-badge" onclick="openAboutModal()">INFO-ON v16</button></footer>
 </main>
 
-<div id="imageModal" class="image-modal">
-  <span class="close-modal" onclick="closeImage()">&times;</span>
-  <img id="modalImage" class="modal-image">
-</div>
-
+<div id="imageModal" class="image-modal"><span class="close-modal" onclick="closeImage()">×</span><img id="modalImage" class="modal-image"></div>
+<div id="aboutModal" class="about-modal"><div class="about-content"><button class="close-about" onclick="closeAboutModal()">×</button><div class="about-header"><h2>INFO-ON v16</h2><div class="language-switcher about-language"><button id="about-pt" onclick="setAboutLanguage('pt')">PT</button><button id="about-en" onclick="setAboutLanguage('en')">EN</button></div></div><div id="about-content"></div></div></div>
 <script src="script.js"></script>
-<div id="aboutModal" class="about-modal">
-
-    <div class="about-content">
-
-        <button class="close-about" onclick="closeAboutModal()">
-
-            ×
-
-        </button>
-
-        <div class="about-header">
-
-            <h2>REGIE-ON v15</h2>
-
-            <div class="language-switcher about-language">
-
-                <button id="about-pt"
-
-                        class="active"
-
-                        onclick="setAboutLanguage('pt')">
-
-                    PT
-
-                </button>
-
-                <button id="about-en"
-
-                        onclick="setAboutLanguage('en')">
-
-                    EN
-
-                </button>
-
-            </div>
-
-        </div>
-
-        <div id="about-content"></div>
-
-    </div>
-
-</div>
 </body>
 </html>

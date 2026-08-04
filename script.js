@@ -334,6 +334,10 @@ const ui = {
 
     vpWipTitle: "Brevemente — Área em desenvolvimento",
     vpWipText: "Esta área receberá procedimentos e orientações para produção virtual.",
+    videotecaWipTitle: "Brevemente — Área em desenvolvimento",
+    videotecaWipText: "Esta área receberá procedimentos e orientações para a Videoteca.",
+    reshapeWipTitle: "Brevemente — Área em desenvolvimento",
+    reshapeWipText: "Esta área receberá procedimentos e orientações para o Reshape.",
 
     stepDone: "Passo concluído",
     mediaTitle: "Imagem / vídeo",
@@ -409,6 +413,10 @@ const ui = {
 
     vpWipTitle: "Coming soon — Area in development",
     vpWipText: "This area will receive procedures and guidance for virtual production.",
+    videotecaWipTitle: "Coming soon — Area in development",
+    videotecaWipText: "This area will receive procedures and guidance for the Film Library.",
+    reshapeWipTitle: "Coming soon — Area in development",
+    reshapeWipText: "This area is prepared to receive Reshape-specific procedures.",
 
     stepDone: "Step completed",
     mediaTitle: "Image / video",

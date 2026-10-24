@@ -55,7 +55,7 @@ const proceduresData = {
 
     streaming: {
       title: "Streaming",
-      storageKey: "infoon_streaming_v16",
+      storageKey: "infoon_streaming_v16", 
       steps: [
         {
           title: "Verificar que a Régie está Operacional",
@@ -282,13 +282,360 @@ const ui = {
     areaRegieDesc: "Arranque · Streaming · Encerramento",
     areaRegieTitle: "Régie",
     areaVP: "VP - Produção Virtual",
-    areaVPDesc: "Produção virtual e estúdios virtuais",
+    areaVPDesc: "Manual de Orientação",
     areaVPTitle: "VP - Produção Virtual",
+    vpCardVirtualSets: "Tipos de Cenários Virtuais",
+    vpCardLedVolume: "Técnicas de LED Volume e ICVFX",
+    vpCardCameraTracking: "Métodos de Camera Tracking",
+    vpCardPrevisualisation: "Planeamento e Pré-visualização",
+    vpCardVirtualScouting: "Métodos de Virtual Scouting",
+    vpCardSetExtension: "Técnicas de Set Extension",
+    vpCardVirtualLighting: "Técnicas de Iluminação Virtual",
+    vpCardChroma: "Composição Chroma Key em Tempo Real",
+    vpCardMotionCapture: "Métodos de Captura de Movimento",
+    vpCardPerformanceCapture: "Captura Integrada de Performance",
+    vpCardRealtimeRendering: "Renderização em Tempo Real",
+    vpCardVirtualCameras: "Sistemas de Câmara Virtual",
+    vpCardPhysicalDigital: "Integração Física-Digital",
+    vpCardAugmentedXR: "Realidade Aumentada e Estendida",
+    vpCardRemoteProduction: "Produção Virtual Remota",
+    vpCardVirtualBroadcast: "Emissão em Estúdio Virtual",
+    vpCardWorkflow: "Fluxo de Produção Virtual",
+    vpCardBrainstorm: "Ideação em Produção Virtual",
+    vpVirtualSetsTag: "Virtual Sets",
+    vpVirtualSets: "Virtual Sets",
+    vpVirtualSetsDesc: "Criação e gestão de cenários digitais para produção virtual.",
+    vpTypeLedVolume: "LED Volume Sets",
+    vpTypeLedVolumeDesc: "Painéis LED de grande formato apresentam o cenário digital em câmara e iluminam o espaço.",
+    vpTypeGreenScreen: "Green Screen Virtual Sets",
+    vpTypeGreenScreenDesc: "Um fundo verde é substituído por um cenário digital através de chroma key.",
+    vpTypeXR: "Extended Reality (XR) Sets",
+    vpTypeXRDesc: "Combina produção física com ambientes e elementos digitais em tempo real.",
+    vpTypeAR: "Augmented Reality (AR) Sets",
+    vpTypeARDesc: "Sobrepõe gráficos e objetos digitais à imagem captada pela câmara.",
+    vpTypeMR: "Mixed Reality (MR) Sets",
+    vpTypeMRDesc: "Integra objetos digitais no espaço físico, permitindo que interajam com o cenário.",
+    vpTypeFullyVirtual: "Fully Virtual Sets",
+    vpTypeFullyVirtualDesc: "Cenário criado integralmente em 3D, sem uma construção física correspondente.",
+    vpTypeHybrid: "Hybrid Physical-Virtual Sets",
+    vpTypeHybridDesc: "Combina elementos físicos reais com cenários e componentes digitais.",
+    vpTypeSetExtensions: "Digital Set Extensions",
+    vpTypeSetExtensionsDesc: "Alarga digitalmente um cenário físico para além dos limites construídos ou visíveis.",
+    vpTypeRealtime3D: "Real-Time 3D Environments",
+    vpTypeRealtime3DDesc: "Ambientes 3D renderizados em tempo real e ajustados à câmara e à ação.",
+    vpTypeStudio: "Virtual Studio Sets",
+    vpTypeStudioDesc: "Estúdio gerado digitalmente, com a câmara e o cenário integrados por tracking.",
+    vpTypeImmersive: "Immersive Virtual Environments",
+    vpTypeImmersiveDesc: "Espaço virtual envolvente que permite explorar o cenário em 360 graus.",
+    vpTypeProjection: "Projection-Based Virtual Sets",
+    vpTypeProjectionDesc: "Projetores cobrem superfícies físicas com imagens que formam o cenário.",
+    vpLedVolumeTag: "LED Volume",
+    vpLedVolume: "LED Volume / In-Camera VFX",
+    vpLedVolumeDesc: "Integração de volume LED e efeitos visuais em câmara.",
+    vpLedTypeFull: "Full LED Volume",
+    vpLedTypeFullDesc: "Painéis LED envolvem o palco, substituindo as superfícies visíveis por um cenário digital.",
+    vpLedTypePartial: "Partial LED Volume",
+    vpLedTypePartialDesc: "Painéis LED cobrem apenas parte do palco e combinam-se com cenário físico.",
+    vpLedTypeCurvedWall: "Curved LED Wall",
+    vpLedTypeCurvedWallDesc: "Uma parede LED curva cria um fundo envolvente e reduz as quebras visuais entre painéis.",
+    vpLedTypeFlatWall: "Flat LED Wall",
+    vpLedTypeFlatWallDesc: "Uma parede LED plana apresenta o cenário digital numa única superfície frontal.",
+    vpLedType360: "360° LED Volume",
+    vpLedType360Desc: "Painéis LED rodeiam a área de filmagem para criar um ambiente visual contínuo em 360 graus.",
+    vpLedTypeCeiling: "LED Ceiling",
+    vpLedTypeCeilingDesc: "Painéis LED no teto mostram céu, elementos superiores ou fontes de luz do cenário.",
+    vpLedTypeFloor: "LED Floor",
+    vpLedTypeFloorDesc: "Um piso LED prolonga o cenário sob os atores e pode criar reflexos visuais realistas.",
+    vpLedTypeMultiWall: "Multi-Wall LED Stage",
+    vpLedTypeMultiWallDesc: "Várias paredes LED formam um palco com cantos e diferentes ângulos de câmara.",
+    vpLedType25D: "2.5D In-Camera VFX",
+    vpLedType25DDesc: "Planos digitais em camadas criam profundidade e paralaxe sem uma cena 3D completa.",
+    vpLedTypeRealtime3D: "Real-Time 3D In-Camera VFX",
+    vpLedTypeRealtime3DDesc: "Um motor 3D atualiza o cenário em tempo real de acordo com a câmara e o tracking.",
+    vpLedTypeVideoPlate: "Video Plate Playback",
+    vpLedTypeVideoPlateDesc: "Vídeos pré-renderizados são reproduzidos nos painéis LED como fundo da filmagem.",
+    vpLedTypeSetExtension: "Digital Set Extension",
+    vpLedTypeSetExtensionDesc: "O cenário digital prolonga o palco físico para além das dimensões do volume LED.",
+    vpLedTypeFrustum: "Frustum-Based Rendering",
+    vpLedTypeFrustumDesc: "A perspetiva do cenário é ajustada ao frustum da câmara para alinhar a imagem captada.",
+    vpLedTypeMultiCamera: "Multi-Camera ICVFX",
+    vpLedTypeMultiCameraDesc: "O sistema coordena tracking e perspetiva para filmagens com várias câmaras.",
+    vpLedTypeHybrid: "Hybrid LED + Green Screen Workflow",
+    vpLedTypeHybridDesc: "Combina painéis LED com chroma key para acomodar diferentes ângulos ou extensões do cenário.",
+    vpCameraTrackingTag: "Tracking",
+    vpCameraTracking: "Camera Tracking",
+    vpCameraTrackingDesc: "Rastreio da câmara e alinhamento do set virtual.",
+    vpTrackingTypeOptical: "Optical Tracking",
+    vpTrackingTypeOpticalDesc: "Câmaras e sensores óticos calculam a posição e orientação da câmara no espaço.",
+    vpTrackingTypeMarkerBased: "Marker-Based Tracking",
+    vpTrackingTypeMarkerBasedDesc: "Marcadores visuais identificáveis permitem determinar a posição e rotação da câmara.",
+    vpTrackingTypeMarkerless: "Markerless Tracking",
+    vpTrackingTypeMarkerlessDesc: "O sistema acompanha características do espaço sem precisar de marcadores dedicados.",
+    vpTrackingTypeInfrared: "Infrared Tracking",
+    vpTrackingTypeInfraredDesc: "Câmaras infravermelhas detetam emissores ou refletores para calcular a posição da câmara.",
+    vpTrackingTypeInsideOut: "Inside-Out Tracking",
+    vpTrackingTypeInsideOutDesc: "Sensores montados na câmara observam o ambiente e calculam o movimento a partir do próprio dispositivo.",
+    vpTrackingTypeOutsideIn: "Outside-In Tracking",
+    vpTrackingTypeOutsideInDesc: "Sensores fixos no estúdio observam marcadores instalados na câmara ou no rig.",
+    vpTrackingTypeMechanical: "Mechanical Tracking",
+    vpTrackingTypeMechanicalDesc: "Um sistema mecânico articulado transmite a posição e orientação da câmara.",
+    vpTrackingTypeEncoder: "Encoder-Based Tracking",
+    vpTrackingTypeEncoderDesc: "Encoders medem os eixos de movimento de suportes, cabeças ou mecanismos da câmara.",
+    vpTrackingTypeInertial: "Inertial Tracking",
+    vpTrackingTypeInertialDesc: "Sensores inerciais estimam movimento e orientação através de aceleração e rotação.",
+    vpTrackingTypeHybrid: "Hybrid Tracking",
+    vpTrackingTypeHybridDesc: "Combina várias tecnologias de tracking para melhorar precisão e continuidade.",
+    vpTrackingTypeLens: "Lens Tracking",
+    vpTrackingTypeLensDesc: "Dados de foco, zoom e íris são enviados ao sistema para sincronizar a lente virtual.",
+    vpTrackingTypeFreeRoaming: "Free-Roaming Camera Tracking",
+    vpTrackingTypeFreeRoamingDesc: "Permite deslocar a câmara livremente pelo estúdio mantendo a posição virtual sincronizada.",
+    vpTrackingTypeDollyRail: "Dolly / Rail Tracking",
+    vpTrackingTypeDollyRailDesc: "Mede o percurso da câmara num dolly ou carril para reproduzir o movimento no cenário virtual.",
+    vpTrackingTypeCraneJib: "Crane / Jib Tracking",
+    vpTrackingTypeCraneJibDesc: "Regista os eixos e movimentos de gruas ou jibs para alinhar a perspetiva virtual.",
+    vpTrackingTypeVirtualCamera: "Virtual Camera Tracking",
+    vpTrackingTypeVirtualCameraDesc: "Controla a posição e orientação de uma câmara virtual dentro de um ambiente 3D.",
+    vpPrevisualisationTag: "Previz",
+    vpPrevisualisation: "Previz",
+    vpPrevisualisationDesc: "Validação visual e planeamento antes da gravação.",
+    vpPrevisOrderNote: "Os itens numerados abaixo seguem uma ordem de execução recomendada, nem tudo é usado.",
+    vpPrevisTypePitchvis: "Pitchvis",
+    vpPrevisTypePitchvisDesc: "Sequência visual usada para apresentar a ideia, o tom e a escala de um projeto.",
+    vpPrevisTypePrevis: "Previs",
+    vpPrevisTypePrevisDesc: "Animação ou visualização 3D que antecipa planos e sequências antes da produção.",
+    vpPrevisTypeTechvis: "Techvis",
+    vpPrevisTypeTechvisDesc: "Planeamento técnico de câmaras, lentes, rigs, iluminação e necessidades do set.",
+    vpPrevisTypeStuntvis: "Stuntvis",
+    vpPrevisTypeStuntvisDesc: "Simulação de ação e coreografia para planear movimentos e avaliar riscos de segurança.",
+    vpPrevisTypePostvis: "Postvis",
+    vpPrevisTypePostvisDesc: "Composição temporária de efeitos visuais usada para avaliar planos após a filmagem.",
+    vpPrevisTypeScouting: "Virtual Scouting",
+    vpPrevisTypeScoutingDesc: "Exploração virtual de locais e cenários para avaliar posições e percursos de câmara.",
+    vpPrevisTypeShotPlanning: "Shot Planning",
+    vpPrevisTypeShotPlanningDesc: "Definição de enquadramentos, lentes e composição para cada plano.",
+    vpPrevisTypeCameraBlocking: "Camera Blocking",
+    vpPrevisTypeCameraBlockingDesc: "Planeamento de posições e movimentos da câmara em relação à ação e ao cenário.",
+    vpPrevisTypeLighting: "Lighting Previs",
+    vpPrevisTypeLightingDesc: "Visualização antecipada da direção, intensidade e cor da iluminação.",
+    vpPrevisTypeAnimation: "Animation Previs",
+    vpPrevisTypeAnimationDesc: "Animação simplificada para testar ritmo, ação e duração de uma sequência.",
+    vpPrevisTypeEnvironment: "Environment Previs",
+    vpPrevisTypeEnvironmentDesc: "Estudo visual de cenários e ambientes para validar escala, percurso e composição.",
+    vpPrevisTypePerformance: "Performance Previs",
+    vpPrevisTypePerformanceDesc: "Planeamento de posições, gestos e interações dos intérpretes na cena.",
+    vpVirtualScoutingTag: "Scouting",
+    vpVirtualScouting: "Virtual Scouting",
+    vpVirtualScoutingDesc: "Exploração de cenários e posicionamentos virtuais.",
+    vpScoutingTypeDesktop: "Desktop Virtual Scouting",
+    vpScoutingTypeDesktopDesc: "Exploração de um cenário 3D num computador para rever espaços, percursos e pontos de vista.",
+    vpScoutingTypeVR: "VR Virtual Scouting",
+    vpScoutingTypeVRDesc: "Visita imersiva ao cenário virtual com headset para avaliar escala e perspetivas.",
+    vpScoutingTypeCollaborative: "Collaborative Virtual Scouting",
+    vpScoutingTypeCollaborativeDesc: "Vários membros da equipa exploram e discutem o mesmo cenário virtual em conjunto.",
+    vpScoutingTypeRealtime: "Real-Time Virtual Scouting",
+    vpScoutingTypeRealtimeDesc: "Exploração de ambientes renderizados em tempo real, com alterações visíveis de imediato.",
+    vpScoutingTypeEnvironment: "Environment Scouting",
+    vpScoutingTypeEnvironmentDesc: "Análise do ambiente, dimensões, acessos e opções de localização ou cenário.",
+    vpScoutingTypeCamera: "Camera Scouting",
+    vpScoutingTypeCameraDesc: "Teste de posições, movimentos, lentes e enquadramentos de câmara no cenário.",
+    vpScoutingTypeLighting: "Lighting Scouting",
+    vpScoutingTypeLightingDesc: "Avaliação da direção da luz, sombras, fontes práticas e condições de iluminação.",
+    vpScoutingTypeSetDesign: "Set Design Scouting",
+    vpScoutingTypeSetDesignDesc: "Estudo da disposição, escala e elementos cenográficos no espaço virtual.",
+    vpScoutingTypeBlocking: "Blocking and Staging Scouting",
+    vpScoutingTypeBlockingDesc: "Planeamento da posição e movimentação de intérpretes e elementos da cena.",
+    vpScoutingTypeTechnical: "Technical Scouting",
+    vpScoutingTypeTechnicalDesc: "Verificação de requisitos técnicos, equipamentos, ligações, acessos e limitações do local.",
+    vpSetExtensionTag: "Set Extension",
+    vpSetExtension: "Set Extension",
+    vpSetExtensionDesc: "Ampliação do cenário físico com elementos virtuais.",
+    vpSetExtensionTypeDigital: "Digital Set Extension",
+    vpSetExtensionTypeDigitalDesc: "Prolonga digitalmente o cenário para além dos elementos físicos construídos ou filmados.",
+    vpSetExtensionType25D: "2.5D Set Extension",
+    vpSetExtensionType25DDesc: "Combina planos digitais em camadas para acrescentar profundidade e paralaxe ao cenário.",
+    vpSetExtensionType3D: "3D Set Extension",
+    vpSetExtensionType3DDesc: "Acrescenta um ambiente tridimensional integrado com a perspetiva e o movimento da câmara.",
+    vpSetExtensionTypeLED: "LED Set Extension",
+    vpSetExtensionTypeLEDDesc: "Usa painéis LED para prolongar visualmente o cenário durante a captação em câmara.",
+    vpSetExtensionTypeGreenScreen: "Green Screen Set Extension",
+    vpSetExtensionTypeGreenScreenDesc: "Substitui áreas de chroma por elementos digitais que ampliam o cenário filmado.",
+    vpSetExtensionTypeMattePainting: "Matte Painting Extension",
+    vpSetExtensionTypeMattePaintingDesc: "Usa uma pintura digital para criar ou prolongar fundos e elementos distantes.",
+    vpSetExtensionTypeProjection: "Projection-Based Set Extension",
+    vpSetExtensionTypeProjectionDesc: "Projeta imagens mapeadas sobre superfícies físicas para expandir o espaço do cenário.",
+    vpSetExtensionTypeRealtime: "Real-Time Set Extension",
+    vpSetExtensionTypeRealtimeDesc: "Renderiza a extensão digital em tempo real, acompanhando a câmara e a cena.",
+    vpSetExtensionTypeInCamera: "In-Camera Set Extension",
+    vpSetExtensionTypeInCameraDesc: "Capta a extensão do cenário diretamente em câmara durante a produção.",
+    vpSetExtensionTypePostProduction: "Post-Production Set Extension",
+    vpSetExtensionTypePostProductionDesc: "Adiciona ou amplia elementos do cenário durante a composição em pós-produção.",
+    vpSetExtensionTypeHybrid: "Hybrid Physical-Digital Set Extension",
+    vpSetExtensionTypeHybridDesc: "Combina cenografia física com elementos digitais para ampliar o espaço filmado.",
+    vpSetExtensionTypeEnvironment: "Environment Extension",
+    vpSetExtensionTypeEnvironmentDesc: "Expande o ambiente visível com áreas digitais integradas ao cenário real.",
+    vpVirtualLightingTag: "Virtual Lighting",
+    vpVirtualLighting: "Virtual Lighting",
+    vpVirtualLightingDesc: "Iluminação virtual e composição em tempo real.",
+    vpLightingTypeRealtime: "Real-Time Lighting",
+    vpLightingTypeRealtimeDesc: "A iluminação atualiza em tempo real em resposta à câmara, à cena ou aos controlos da equipa.",
+    vpLightingTypeIBL: "Image-Based Lighting (IBL)",
+    vpLightingTypeIBLDesc: "Usa uma imagem do ambiente para iluminar objetos virtuais com luz e cor coerentes.",
+    vpLightingTypeHDRI: "HDRI Lighting",
+    vpLightingTypeHDRIDesc: "Usa imagens panorâmicas de alto alcance dinâmico para iluminar e refletir o ambiente.",
+    vpLightingTypeEnvironment: "Environment Lighting",
+    vpLightingTypeEnvironmentDesc: "A luz do cenário virtual ilumina os objetos e contribui para a iluminação global.",
+    vpLightingTypeLEDVolume: "LED Volume Lighting",
+    vpLightingTypeLEDVolumeDesc: "A luz emitida pelos painéis LED integra-se na iluminação dos elementos físicos em cena.",
+    vpLightingTypeInteractive: "Interactive Lighting",
+    vpLightingTypeInteractiveDesc: "Parâmetros de luz podem ser ajustados durante a produção através de controlos interativos.",
+    vpLightingTypeDynamic: "Dynamic Lighting",
+    vpLightingTypeDynamicDesc: "A intensidade, cor ou posição da luz muda ao longo da cena ou em resposta à ação.",
+    vpLightingTypePractical: "Practical-to-Virtual Lighting",
+    vpLightingTypePracticalDesc: "Luzes práticas do cenário são combinadas e alinhadas com fontes virtuais correspondentes.",
+    vpLightingTypeKey: "Virtual Key Lighting",
+    vpLightingTypeKeyDesc: "Luz principal virtual define a direção e o caráter dominante da iluminação do sujeito.",
+    vpLightingTypeFill: "Virtual Fill Lighting",
+    vpLightingTypeFillDesc: "Luz de preenchimento virtual suaviza sombras e controla o contraste do sujeito.",
+    vpLightingTypeBack: "Virtual Backlighting",
+    vpLightingTypeBackDesc: "Luz virtual atrás do sujeito cria recorte e separação em relação ao fundo.",
+    vpLightingTypeEmissive: "Emissive Lighting",
+    vpLightingTypeEmissiveDesc: "Materiais luminosos do cenário virtual funcionam como fontes de luz para a cena.",
+    vpLightingTypeReflection: "Reflection Lighting",
+    vpLightingTypeReflectionDesc: "Reflexos virtuais reproduzem fontes e ambientes refletidos nas superfícies dos objetos.",
+    vpLightingTypeShadow: "Shadow Matching",
+    vpLightingTypeShadowDesc: "Direção, intensidade e suavidade das sombras virtuais são alinhadas às sombras reais.",
+    vpLightingTypeLinking: "Light Linking",
+    vpLightingTypeLinkingDesc: "Define quais luzes afetam cada objeto, permitindo controlar a iluminação por elemento.",
+    vpLightingTypeDMX: "DMX-Controlled Virtual Lighting",
+    vpLightingTypeDMXDesc: "Controlos DMX sincronizam luminárias físicas e parâmetros de iluminação virtual.",
+    vpLightingTypePBR: "Physically Based Lighting",
+    vpLightingTypePBRDesc: "Simula luz e materiais segundo propriedades físicas para obter resultados consistentes.",
+    vpLightingTypeHybrid: "Hybrid Physical-Virtual Lighting",
+    vpLightingTypeHybridDesc: "Combina luminárias físicas e luzes virtuais para integrar atores e cenário digital.",
+    vpChromaTag: "Chroma",
+    vpChroma: "Real-Time Chroma Key",
+    vpChromaDesc: "Chroma key em tempo real e integração da imagem.",
+    vpChromaTypeGreenScreen: "Green Screen Keying",
+    vpChromaTypeGreenScreenDesc: "Remove o fundo verde da imagem para o substituir por um cenário ou composição digital.",
+    vpChromaTypeBlueScreen: "Blue Screen Keying",
+    vpChromaTypeBlueScreenDesc: "Remove o fundo azul da imagem para revelar o cenário digital composto por trás do sujeito.",
+    vpChromaTypeCompositing: "Real-Time Compositing",
+    vpChromaTypeCompositingDesc: "Combina a imagem captada e os elementos digitais numa composição final durante a filmagem.",
+    vpChromaTypeMultiLayer: "Multi-Layer Compositing",
+    vpChromaTypeMultiLayerDesc: "Combina várias camadas de imagem, máscaras e elementos digitais numa única composição.",
+    vpChromaTypeMatte: "Garbage Matte / Holdout Matte",
+    vpChromaTypeMatteDesc: "Máscaras excluem áreas indesejadas ou ocultam partes da composição para controlar a imagem composta.",
+    vpChromaTypeSpill: "Spill Suppression",
+    vpChromaTypeSpillDesc: "Reduz a cor do fundo refletida nas bordas e superfícies do sujeito filmado.",
+    vpChromaTypeEdge: "Edge Refinement",
+    vpChromaTypeEdgeDesc: "Refina as bordas recortadas, preservando detalhes finos como cabelo e transparências.",
+    vpChromaTypeLightWrap: "Light Wrap",
+    vpChromaTypeLightWrapDesc: "Integra a luz e as cores do fundo digital nas bordas do sujeito para uma composição mais natural.",
+    vpChromaTypeShadow: "Shadow Integration",
+    vpChromaTypeShadowDesc: "Integra sombras reais ou digitais para ligar o sujeito ao cenário composto.",
+    vpChromaTypeReflection: "Reflection Integration",
+    vpChromaTypeReflectionDesc: "Preserva ou acrescenta reflexos coerentes com o cenário digital em superfícies refletoras.",
+    vpChromaTypeBackground: "Real-Time Background Replacement",
+    vpChromaTypeBackgroundDesc: "Substitui o fundo recortado por uma imagem ou ambiente digital durante a captação.",
+    vpChromaTypeCameraTracked: "Camera-Tracked Chroma Key",
+    vpChromaTypeCameraTrackedDesc: "Sincroniza o cenário composto com a posição e a perspetiva da câmara em movimento.",
+    vpChromaTypeLensCalibrated: "Lens-Calibrated Compositing",
+    vpChromaTypeLensCalibratedDesc: "Aplica calibração ótica para alinhar distorção, foco e perspetiva entre imagem e cenário.",
+    vpChromaTypeDepth: "Depth-Based Compositing",
+    vpChromaTypeDepthDesc: "Usa dados de profundidade para definir oclusões e a ordem espacial dos elementos compostos.",
+    vpChromaTypeMultiCamera: "Multi-Camera Chroma Key",
+    vpChromaTypeMultiCameraDesc: "Coordena recorte, cor e composição de chroma key em várias câmaras.",
+    vpChromaTypeHybridAR: "Hybrid Chroma Key + AR",
+    vpChromaTypeHybridARDesc: "Combina recorte chroma com gráficos e objetos de realidade aumentada em tempo real.",
+    vpChromaTypeColourMatching: "Real-Time Colour Matching",
+    vpChromaTypeColourMatchingDesc: "Equilibra em tempo real cor, exposição e contraste entre o sujeito e o cenário digital.",
+    vpChromaTypeVirtualSet: "Real-Time Virtual Set Integration",
+    vpChromaTypeVirtualSetDesc: "Integra o sujeito recortado num cenário 3D acompanhado e composto em tempo real.",
+    vpMotionCaptureTag: "Motion Capture",
+    vpMotionCapture: "Motion Capture",
+    vpMotionCaptureDesc: "Captura de movimento e sincronização de performance.",
+    vpMotionTypeOptical: "Optical Motion Capture",
+    vpMotionTypeOpticalDesc: "Câmaras captam marcadores ou características visuais para reconstruir o movimento em 3D.",
+    vpMotionTypeMarkerBased: "Marker-Based Motion Capture",
+    vpMotionTypeMarkerBasedDesc: "Marcadores colocados no corpo são rastreados por câmaras para medir movimentos com precisão.",
+    vpMotionTypeMarkerless: "Markerless Motion Capture",
+    vpMotionTypeMarkerlessDesc: "Visão computacional estima a pose e o movimento corporal sem marcadores físicos.",
+    vpMotionTypeInertial: "Inertial Motion Capture",
+    vpMotionTypeInertialDesc: "Sensores inerciais usados no corpo estimam orientação e movimento sem câmaras externas.",
+    vpMotionTypeMagnetic: "Magnetic Motion Capture",
+    vpMotionTypeMagneticDesc: "Sensores medem a posição e orientação através de campos magnéticos gerados pelo sistema.",
+    vpMotionTypeMechanical: "Mechanical Motion Capture",
+    vpMotionTypeMechanicalDesc: "Um exoesqueleto ou conjunto articulado mede mecanicamente os movimentos do corpo.",
+    vpMotionTypeFacial: "Facial Motion Capture",
+    vpMotionTypeFacialDesc: "Regista expressões e movimentos faciais para os aplicar a um personagem digital.",
+    vpMotionTypeBody: "Body Motion Capture",
+    vpMotionTypeBodyDesc: "Capta os movimentos do corpo para reconstruir a pose e a atuação de um intérprete.",
+    vpMotionTypeHand: "Hand and Finger Tracking",
+    vpMotionTypeHandDesc: "Rastreia mãos e dedos para reproduzir gestos e movimentos finos em tempo real.",
+    vpMotionTypePerformance: "Performance Capture",
+    vpMotionTypePerformanceDesc: "Combina movimentos corporais e, quando necessário, faciais para registar a atuação completa.",
+    vpMotionTypeRealtime: "Real-Time Motion Capture",
+    vpMotionTypeRealtimeDesc: "Transmite dados de movimento durante a captação para visualização e utilização imediatas.",
+    vpMotionTypeRetargeting: "Live Retargeting",
+    vpMotionTypeRetargetingDesc: "Mapeia em direto os movimentos captados para o rig e as proporções de um personagem digital.",
+    vpMotionTypeCharacterAnimation: "Virtual Character Animation",
+    vpMotionTypeCharacterAnimationDesc: "Anima um personagem digital usando dados captados ou controlos de animação virtuais.",
+    vpMotionTypeMultiActor: "Multi-Actor Motion Capture",
+    vpMotionTypeMultiActorDesc: "Capta simultaneamente vários intérpretes e mantém os seus movimentos separados e sincronizados.",
+    vpMotionTypeHybrid: "Hybrid Motion Capture",
+    vpMotionTypeHybridDesc: "Combina métodos óticos, inerciais ou outros para melhorar cobertura e continuidade.",
+    vpMotionTypeFullBody: "Full-Body Tracking",
+    vpMotionTypeFullBodyDesc: "Rastreia o corpo inteiro para obter uma pose articulada da cabeça aos pés.",
+    vpMotionTypeProps: "Props Tracking",
+    vpMotionTypePropsDesc: "Rastreia objetos de cena para sincronizar a sua posição e rotação com a atuação.",
+    vpMotionTypeCameraIntegration: "Camera Tracking Integration",
+    vpMotionTypeCameraIntegrationDesc: "Sincroniza a captura corporal com o tracking da câmara e as coordenadas do cenário virtual.",
+    vpPerformanceCaptureTag: "Performance Capture",
+    vpPerformanceCapture: "Performance Capture",
+    vpPerformanceCaptureDesc: "Gravação de performance com tracking e análise.",
+    vpRealtimeRenderingTag: "Rendering",
+    vpRealtimeRendering: "Real-Time Rendering",
+    vpRealtimeRenderingDesc: "Renderização em tempo real para monitorização e validação.",
+    vpVirtualCamerasTag: "Virtual Cameras",
+    vpVirtualCameras: "Virtual Cameras",
+    vpVirtualCamerasDesc: "Controlo de câmaras virtuais e composição digital.",
+    vpPhysicalDigitalTag: "Integration",
+    vpPhysicalDigital: "Physical-Digital Integration",
+    vpPhysicalDigitalDesc: "Sincronização entre elementos físicos e digitais.",
+    vpAugmentedXRTag: "AR + XR",
+    vpAugmentedXR: "Augmented Reality and XR",
+    vpAugmentedXRDesc: "Realidade aumentada, realidade estendida e integração visual.",
+    vpRemoteProductionTag: "Remote",
+    vpRemoteProduction: "Remote Production",
+    vpRemoteProductionDesc: "Produção remota e colaboração distribuída.",
+    vpVirtualBroadcastTag: "Broadcast",
+    vpVirtualBroadcast: "Virtual Broadcast",
+    vpVirtualBroadcastDesc: "Emissão virtual e operação de transmissão em ambiente digital.",
+    vpWorkflowTag: "Workflow",
+    vpWorkflow: "Virtual Production Workflow",
+    vpWorkflowDesc: "Fluxo completo de produção virtual, validação e execução.",
+    vpBrainstormTag: "Brainstorm",
+    vpBrainstorm: "Brainstorm",
+    vpBrainstormDesc: "Ideação, exploração criativa e desenvolvimento de conceitos para produção virtual.",
     areaVideoteca: "Videoteca",
-    areaVideotecaDesc: "Acesso a vídeos e referências técnicas",
+    areaVideotecaDesc: "Coleção audiovisual para consulta",
+    libraryLocationLabel: "Localização",
+    libraryContactsLabel: "Contactos",
+    libraryUseNote: "Todo o material é para utilização educativa e para fins de pesquisa.",
+    libraryWarningLabel: "Aviso:",
+    libraryReturnWarning: "Qualquer DVD não devolvido no prazo de 30 dias será debitado na conta do aluno pelo valor de cinco vezes o preço original.",
+    libraryEntranceCaption: "Entrada da Film Library",
+    libraryEntranceDescription: "Acesso à coleção audiovisual da Universidade Lusófona.",
+    libraryCollectionCaption: "Coleção de filmes",
+    libraryCollectionDescription: "Vista da porta e das estantes com filmes disponíveis para consulta.",
     areaVideotecaTitle: "Videoteca",
     areaReshape: "Reshape",
-    areaReshapeDesc: "Área preparada para novos procedimentos",
+    areaReshapeDesc: "Portal para consultar e gerir reservas de estúdios, salas e equipamentos.",
+    reshapeLoginCaption: "Login",
+    reshapeLoginDescription: "Acesso protegido ao portal Reshape.",
+    reshapeOverviewCaption: "Página geral",
+    reshapeOverviewDescription: "Área para consultar e gerir requisições de salas e equipamentos.",
+    reshapeOpenPortal: "Abrir portal Reshape",
     areaStudiosTitle: "Regras - Estúdios",
 
     generalProcedures: "Procedimentos Gerais",
@@ -298,9 +645,13 @@ const ui = {
     backButton: "← Voltar",
 
     security: "Segurança",
+    securityCardTitle: "Segurança no Estúdio",
     bookings: "Reservas",
+    bookingsCardTitle: "Informações sobre Reservas",
     cleaning: "Limpeza",
+    cleaningCardTitle: "Como fazer a limpeza",
     equipment: "Equipamentos",
+    equipmentCardTitle: "Equipamentos disponíveis",
 
     securityDesc: "Regras essenciais de segurança, circulação, cabos e utilização responsável dos espaços.",
     bookingsDesc: "Marcação, confirmação, utilização e cancelamento de espaços e equipamentos.",
@@ -361,13 +712,360 @@ const ui = {
     areaRegieDesc: "Startup · Streaming · Shutdown",
     areaRegieTitle: "Control Room",
     areaVP: "VP - Virtual Production",
-    areaVPDesc: "Virtual production and virtual studios",
+    areaVPDesc: "Manual of Orientation",
     areaVPTitle: "VP - Virtual Production",
+    vpCardVirtualSets: "Virtual Set Types",
+    vpCardLedVolume: "LED Volume and ICVFX Techniques",
+    vpCardCameraTracking: "Camera Tracking Methods",
+    vpCardPrevisualisation: "Previsualisation and Planning",
+    vpCardVirtualScouting: "Virtual Scouting Methods",
+    vpCardSetExtension: "Set Extension Techniques",
+    vpCardVirtualLighting: "Virtual Lighting Techniques",
+    vpCardChroma: "Real-Time Chroma Key Compositing",
+    vpCardMotionCapture: "Motion Capture Methods",
+    vpCardPerformanceCapture: "Integrated Performance Capture",
+    vpCardRealtimeRendering: "Real-Time Rendering",
+    vpCardVirtualCameras: "Virtual Camera Systems",
+    vpCardPhysicalDigital: "Physical-Digital Integration",
+    vpCardAugmentedXR: "Augmented and Extended Reality",
+    vpCardRemoteProduction: "Remote Virtual Production",
+    vpCardVirtualBroadcast: "Virtual Studio Broadcasting",
+    vpCardWorkflow: "Virtual Production Workflow",
+    vpCardBrainstorm: "Virtual Production Ideation",
+    vpVirtualSetsTag: "Virtual Sets",
+    vpVirtualSets: "Virtual Sets",
+    vpVirtualSetsDesc: "Creation and management of digital environments for virtual production.",
+    vpTypeLedVolume: "LED Volume Sets",
+    vpTypeLedVolumeDesc: "Large LED panels display the digital environment in camera and illuminate the set.",
+    vpTypeGreenScreen: "Green Screen Virtual Sets",
+    vpTypeGreenScreenDesc: "A green background is replaced with a digital environment using chroma key.",
+    vpTypeXR: "Extended Reality (XR) Sets",
+    vpTypeXRDesc: "Combines physical production with digital environments and elements in real time.",
+    vpTypeAR: "Augmented Reality (AR) Sets",
+    vpTypeARDesc: "Overlays digital graphics and objects onto the live camera image.",
+    vpTypeMR: "Mixed Reality (MR) Sets",
+    vpTypeMRDesc: "Places digital objects in physical space so they can interact with the surroundings.",
+    vpTypeFullyVirtual: "Fully Virtual Sets",
+    vpTypeFullyVirtualDesc: "An entirely computer-generated 3D environment with no matching physical set.",
+    vpTypeHybrid: "Hybrid Physical-Virtual Sets",
+    vpTypeHybridDesc: "Combines real physical elements with digital environments and components.",
+    vpTypeSetExtensions: "Digital Set Extensions",
+    vpTypeSetExtensionsDesc: "Digitally expands a physical set beyond its built or visible boundaries.",
+    vpTypeRealtime3D: "Real-Time 3D Environments",
+    vpTypeRealtime3DDesc: "3D environments rendered in real time and adapted to the camera and action.",
+    vpTypeStudio: "Virtual Studio Sets",
+    vpTypeStudioDesc: "A digitally generated studio with the camera and environment aligned through tracking.",
+    vpTypeImmersive: "Immersive Virtual Environments",
+    vpTypeImmersiveDesc: "An enveloping virtual space that can be explored in 360 degrees.",
+    vpTypeProjection: "Projection-Based Virtual Sets",
+    vpTypeProjectionDesc: "Projectors cover physical surfaces with images that create the set.",
+    vpLedVolumeTag: "LED Volume",
+    vpLedVolume: "LED Volume / In-Camera VFX",
+    vpLedVolumeDesc: "Integration of LED volume and in-camera visual effects.",
+    vpLedTypeFull: "Full LED Volume",
+    vpLedTypeFullDesc: "LED panels surround the stage, replacing visible surfaces with a digital environment.",
+    vpLedTypePartial: "Partial LED Volume",
+    vpLedTypePartialDesc: "LED panels cover only part of the stage and combine with a physical set.",
+    vpLedTypeCurvedWall: "Curved LED Wall",
+    vpLedTypeCurvedWallDesc: "A curved LED wall creates an enveloping background and reduces visible joins between panels.",
+    vpLedTypeFlatWall: "Flat LED Wall",
+    vpLedTypeFlatWallDesc: "A flat LED wall displays the digital environment on a single front-facing surface.",
+    vpLedType360: "360° LED Volume",
+    vpLedType360Desc: "LED panels surround the filming area to create a continuous 360-degree visual environment.",
+    vpLedTypeCeiling: "LED Ceiling",
+    vpLedTypeCeilingDesc: "Overhead LED panels display skies, set elements above the scene, or light sources.",
+    vpLedTypeFloor: "LED Floor",
+    vpLedTypeFloorDesc: "An LED floor extends the environment beneath performers and can create realistic visual reflections.",
+    vpLedTypeMultiWall: "Multi-Wall LED Stage",
+    vpLedTypeMultiWallDesc: "Multiple LED walls form a stage with corners and varied camera angles.",
+    vpLedType25D: "2.5D In-Camera VFX",
+    vpLedType25DDesc: "Layered digital plates create depth and parallax without a complete 3D scene.",
+    vpLedTypeRealtime3D: "Real-Time 3D In-Camera VFX",
+    vpLedTypeRealtime3DDesc: "A 3D engine updates the environment in real time according to camera movement and tracking.",
+    vpLedTypeVideoPlate: "Video Plate Playback",
+    vpLedTypeVideoPlateDesc: "Pre-rendered videos play on LED panels as the background for filming.",
+    vpLedTypeSetExtension: "Digital Set Extension",
+    vpLedTypeSetExtensionDesc: "The digital environment extends the physical set beyond the dimensions of the LED volume.",
+    vpLedTypeFrustum: "Frustum-Based Rendering",
+    vpLedTypeFrustumDesc: "The environment perspective is adjusted to the camera frustum to align with the captured image.",
+    vpLedTypeMultiCamera: "Multi-Camera ICVFX",
+    vpLedTypeMultiCameraDesc: "The system coordinates tracking and perspective for filming with multiple cameras.",
+    vpLedTypeHybrid: "Hybrid LED + Green Screen Workflow",
+    vpLedTypeHybridDesc: "Combines LED panels and chroma key to support different angles or set extensions.",
+    vpCameraTrackingTag: "Tracking",
+    vpCameraTracking: "Camera Tracking",
+    vpCameraTrackingDesc: "Camera tracking and alignment of the virtual set.",
+    vpTrackingTypeOptical: "Optical Tracking",
+    vpTrackingTypeOpticalDesc: "Optical cameras and sensors calculate the camera's position and orientation in space.",
+    vpTrackingTypeMarkerBased: "Marker-Based Tracking",
+    vpTrackingTypeMarkerBasedDesc: "Recognisable visual markers are used to determine the camera's position and rotation.",
+    vpTrackingTypeMarkerless: "Markerless Tracking",
+    vpTrackingTypeMarkerlessDesc: "The system follows features in the environment without dedicated markers.",
+    vpTrackingTypeInfrared: "Infrared Tracking",
+    vpTrackingTypeInfraredDesc: "Infrared cameras detect emitters or reflectors to calculate the camera's position.",
+    vpTrackingTypeInsideOut: "Inside-Out Tracking",
+    vpTrackingTypeInsideOutDesc: "Sensors mounted on the camera observe the environment and calculate movement from the device itself.",
+    vpTrackingTypeOutsideIn: "Outside-In Tracking",
+    vpTrackingTypeOutsideInDesc: "Fixed studio sensors observe markers mounted on the camera or rig.",
+    vpTrackingTypeMechanical: "Mechanical Tracking",
+    vpTrackingTypeMechanicalDesc: "An articulated mechanical system transmits the camera's position and orientation.",
+    vpTrackingTypeEncoder: "Encoder-Based Tracking",
+    vpTrackingTypeEncoderDesc: "Encoders measure movement axes on camera supports, heads or mechanisms.",
+    vpTrackingTypeInertial: "Inertial Tracking",
+    vpTrackingTypeInertialDesc: "Inertial sensors estimate movement and orientation from acceleration and rotation.",
+    vpTrackingTypeHybrid: "Hybrid Tracking",
+    vpTrackingTypeHybridDesc: "Combines multiple tracking technologies to improve accuracy and continuity.",
+    vpTrackingTypeLens: "Lens Tracking",
+    vpTrackingTypeLensDesc: "Focus, zoom and iris data are sent to the system to synchronise the virtual lens.",
+    vpTrackingTypeFreeRoaming: "Free-Roaming Camera Tracking",
+    vpTrackingTypeFreeRoamingDesc: "Lets the camera move freely around the studio while keeping its virtual position synchronised.",
+    vpTrackingTypeDollyRail: "Dolly / Rail Tracking",
+    vpTrackingTypeDollyRailDesc: "Measures camera travel on a dolly or rail to reproduce movement in the virtual environment.",
+    vpTrackingTypeCraneJib: "Crane / Jib Tracking",
+    vpTrackingTypeCraneJibDesc: "Records crane or jib axes and movement to align the virtual perspective.",
+    vpTrackingTypeVirtualCamera: "Virtual Camera Tracking",
+    vpTrackingTypeVirtualCameraDesc: "Controls the position and orientation of a virtual camera in a 3D environment.",
+    vpPrevisualisationTag: "Previz",
+    vpPrevisualisation: "Previz",
+    vpPrevisualisationDesc: "Visual validation and planning before recording.",
+    vpPrevisOrderNote: "The numbered items below indicate a recommended execution order; not all items are used.",
+    vpPrevisTypePitchvis: "Pitchvis",
+    vpPrevisTypePitchvisDesc: "A visual sequence used to present a project's idea, tone and scale.",
+    vpPrevisTypePrevis: "Previs",
+    vpPrevisTypePrevisDesc: "An animation or 3D visualisation that previews shots and sequences before production.",
+    vpPrevisTypeTechvis: "Techvis",
+    vpPrevisTypeTechvisDesc: "Technical planning for cameras, lenses, rigs, lighting and set requirements.",
+    vpPrevisTypeStuntvis: "Stuntvis",
+    vpPrevisTypeStuntvisDesc: "A simulation of action and choreography to plan movement and assess safety risks.",
+    vpPrevisTypePostvis: "Postvis",
+    vpPrevisTypePostvisDesc: "Temporary visual-effects compositing used to evaluate shots after filming.",
+    vpPrevisTypeScouting: "Virtual Scouting",
+    vpPrevisTypeScoutingDesc: "Virtual exploration of locations and sets to assess camera positions and routes.",
+    vpPrevisTypeShotPlanning: "Shot Planning",
+    vpPrevisTypeShotPlanningDesc: "Defining framing, lenses and composition for each shot.",
+    vpPrevisTypeCameraBlocking: "Camera Blocking",
+    vpPrevisTypeCameraBlockingDesc: "Planning camera positions and movement in relation to the action and set.",
+    vpPrevisTypeLighting: "Lighting Previs",
+    vpPrevisTypeLightingDesc: "Previewing the direction, intensity and colour of lighting.",
+    vpPrevisTypeAnimation: "Animation Previs",
+    vpPrevisTypeAnimationDesc: "Simplified animation used to test the pace, action and duration of a sequence.",
+    vpPrevisTypeEnvironment: "Environment Previs",
+    vpPrevisTypeEnvironmentDesc: "Visual study of sets and environments to validate scale, movement and composition.",
+    vpPrevisTypePerformance: "Performance Previs",
+    vpPrevisTypePerformanceDesc: "Planning performers' positions, gestures and interactions within a scene.",
+    vpVirtualScoutingTag: "Scouting",
+    vpVirtualScouting: "Virtual Scouting",
+    vpVirtualScoutingDesc: "Exploration of environments and virtual positioning.",
+    vpScoutingTypeDesktop: "Desktop Virtual Scouting",
+    vpScoutingTypeDesktopDesc: "Explore a 3D environment on a computer to review spaces, routes and viewpoints.",
+    vpScoutingTypeVR: "VR Virtual Scouting",
+    vpScoutingTypeVRDesc: "An immersive visit to the virtual set using a headset to assess scale and perspectives.",
+    vpScoutingTypeCollaborative: "Collaborative Virtual Scouting",
+    vpScoutingTypeCollaborativeDesc: "Multiple team members explore and discuss the same virtual environment together.",
+    vpScoutingTypeRealtime: "Real-Time Virtual Scouting",
+    vpScoutingTypeRealtimeDesc: "Explore environments rendered in real time, with changes visible immediately.",
+    vpScoutingTypeEnvironment: "Environment Scouting",
+    vpScoutingTypeEnvironmentDesc: "Assess the environment, dimensions, access and location or set options.",
+    vpScoutingTypeCamera: "Camera Scouting",
+    vpScoutingTypeCameraDesc: "Test camera positions, movement, lenses and framing in the environment.",
+    vpScoutingTypeLighting: "Lighting Scouting",
+    vpScoutingTypeLightingDesc: "Evaluate light direction, shadows, practical sources and lighting conditions.",
+    vpScoutingTypeSetDesign: "Set Design Scouting",
+    vpScoutingTypeSetDesignDesc: "Study the layout, scale and scenic elements within the virtual space.",
+    vpScoutingTypeBlocking: "Blocking and Staging Scouting",
+    vpScoutingTypeBlockingDesc: "Plan performer positions and movement alongside scene elements.",
+    vpScoutingTypeTechnical: "Technical Scouting",
+    vpScoutingTypeTechnicalDesc: "Check technical requirements, equipment, connections, access and location constraints.",
+    vpSetExtensionTag: "Set Extension",
+    vpSetExtension: "Set Extension",
+    vpSetExtensionDesc: "Extension of the physical set with virtual elements.",
+    vpSetExtensionTypeDigital: "Digital Set Extension",
+    vpSetExtensionTypeDigitalDesc: "Digitally extends the set beyond the physical elements that were built or filmed.",
+    vpSetExtensionType25D: "2.5D Set Extension",
+    vpSetExtensionType25DDesc: "Combines layered digital planes to add depth and parallax to the set.",
+    vpSetExtensionType3D: "3D Set Extension",
+    vpSetExtensionType3DDesc: "Adds a three-dimensional environment aligned with camera perspective and movement.",
+    vpSetExtensionTypeLED: "LED Set Extension",
+    vpSetExtensionTypeLEDDesc: "Uses LED panels to visually extend the set during in-camera capture.",
+    vpSetExtensionTypeGreenScreen: "Green Screen Set Extension",
+    vpSetExtensionTypeGreenScreenDesc: "Replaces chroma-key areas with digital elements that extend the filmed set.",
+    vpSetExtensionTypeMattePainting: "Matte Painting Extension",
+    vpSetExtensionTypeMattePaintingDesc: "Uses digital painting to create or extend backgrounds and distant elements.",
+    vpSetExtensionTypeProjection: "Projection-Based Set Extension",
+    vpSetExtensionTypeProjectionDesc: "Projects mapped imagery onto physical surfaces to expand the set space.",
+    vpSetExtensionTypeRealtime: "Real-Time Set Extension",
+    vpSetExtensionTypeRealtimeDesc: "Renders the digital extension in real time, tracking the camera and scene.",
+    vpSetExtensionTypeInCamera: "In-Camera Set Extension",
+    vpSetExtensionTypeInCameraDesc: "Captures the set extension directly in camera during production.",
+    vpSetExtensionTypePostProduction: "Post-Production Set Extension",
+    vpSetExtensionTypePostProductionDesc: "Adds or extends set elements during post-production compositing.",
+    vpSetExtensionTypeHybrid: "Hybrid Physical-Digital Set Extension",
+    vpSetExtensionTypeHybridDesc: "Combines physical scenery with digital elements to expand the filmed space.",
+    vpSetExtensionTypeEnvironment: "Environment Extension",
+    vpSetExtensionTypeEnvironmentDesc: "Expands the visible environment with digital areas integrated into the real set.",
+    vpVirtualLightingTag: "Virtual Lighting",
+    vpVirtualLighting: "Virtual Lighting",
+    vpVirtualLightingDesc: "Virtual lighting and composition in real time.",
+    vpLightingTypeRealtime: "Real-Time Lighting",
+    vpLightingTypeRealtimeDesc: "Lighting updates in real time in response to the camera, scene or team controls.",
+    vpLightingTypeIBL: "Image-Based Lighting (IBL)",
+    vpLightingTypeIBLDesc: "Uses an environment image to illuminate virtual objects with consistent light and colour.",
+    vpLightingTypeHDRI: "HDRI Lighting",
+    vpLightingTypeHDRIDesc: "Uses high-dynamic-range panoramic images to illuminate and reflect the environment.",
+    vpLightingTypeEnvironment: "Environment Lighting",
+    vpLightingTypeEnvironmentDesc: "Light from the virtual environment illuminates objects and contributes to global illumination.",
+    vpLightingTypeLEDVolume: "LED Volume Lighting",
+    vpLightingTypeLEDVolumeDesc: "Light emitted by LED panels contributes to the lighting of physical elements on set.",
+    vpLightingTypeInteractive: "Interactive Lighting",
+    vpLightingTypeInteractiveDesc: "Lighting parameters can be adjusted during production through interactive controls.",
+    vpLightingTypeDynamic: "Dynamic Lighting",
+    vpLightingTypeDynamicDesc: "Light intensity, colour or position changes throughout a scene or in response to action.",
+    vpLightingTypePractical: "Practical-to-Virtual Lighting",
+    vpLightingTypePracticalDesc: "Practical set lights are combined and aligned with corresponding virtual sources.",
+    vpLightingTypeKey: "Virtual Key Lighting",
+    vpLightingTypeKeyDesc: "Virtual key light establishes the main direction and character of light on the subject.",
+    vpLightingTypeFill: "Virtual Fill Lighting",
+    vpLightingTypeFillDesc: "Virtual fill light softens shadows and controls contrast on the subject.",
+    vpLightingTypeBack: "Virtual Backlighting",
+    vpLightingTypeBackDesc: "Virtual light behind the subject creates an edge and separates it from the background.",
+    vpLightingTypeEmissive: "Emissive Lighting",
+    vpLightingTypeEmissiveDesc: "Luminous materials in the virtual set act as light sources for the scene.",
+    vpLightingTypeReflection: "Reflection Lighting",
+    vpLightingTypeReflectionDesc: "Virtual reflections reproduce light sources and environments on object surfaces.",
+    vpLightingTypeShadow: "Shadow Matching",
+    vpLightingTypeShadowDesc: "The direction, intensity and softness of virtual shadows are matched to real shadows.",
+    vpLightingTypeLinking: "Light Linking",
+    vpLightingTypeLinkingDesc: "Defines which lights affect each object, enabling per-element lighting control.",
+    vpLightingTypeDMX: "DMX-Controlled Virtual Lighting",
+    vpLightingTypeDMXDesc: "DMX controls synchronise physical fixtures with virtual lighting parameters.",
+    vpLightingTypePBR: "Physically Based Lighting",
+    vpLightingTypePBRDesc: "Simulates light and materials using physical properties for consistent results.",
+    vpLightingTypeHybrid: "Hybrid Physical-Virtual Lighting",
+    vpLightingTypeHybridDesc: "Combines physical fixtures and virtual lights to integrate performers with digital sets.",
+    vpChromaTag: "Chroma",
+    vpChroma: "Real-Time Chroma Key",
+    vpChromaDesc: "Real-time chroma key and image integration.",
+    vpChromaTypeGreenScreen: "Green Screen Keying",
+    vpChromaTypeGreenScreenDesc: "Removes the green background so it can be replaced with a digital set or composite.",
+    vpChromaTypeBlueScreen: "Blue Screen Keying",
+    vpChromaTypeBlueScreenDesc: "Removes the blue background to reveal the digital environment composited behind the subject.",
+    vpChromaTypeCompositing: "Real-Time Compositing",
+    vpChromaTypeCompositingDesc: "Combines the captured image and digital elements into a final composite during filming.",
+    vpChromaTypeMultiLayer: "Multi-Layer Compositing",
+    vpChromaTypeMultiLayerDesc: "Combines multiple image layers, mattes and digital elements into one composite.",
+    vpChromaTypeMatte: "Garbage Matte / Holdout Matte",
+    vpChromaTypeMatteDesc: "Mattes exclude unwanted areas or hide parts of a composite to control the final image.",
+    vpChromaTypeSpill: "Spill Suppression",
+    vpChromaTypeSpillDesc: "Reduces screen colour reflected onto the edges and surfaces of the filmed subject.",
+    vpChromaTypeEdge: "Edge Refinement",
+    vpChromaTypeEdgeDesc: "Refines keyed edges while preserving fine details such as hair and transparency.",
+    vpChromaTypeLightWrap: "Light Wrap",
+    vpChromaTypeLightWrapDesc: "Blends background light and colour around the subject's edges for a more natural composite.",
+    vpChromaTypeShadow: "Shadow Integration",
+    vpChromaTypeShadowDesc: "Integrates real or digital shadows to connect the subject with the composited environment.",
+    vpChromaTypeReflection: "Reflection Integration",
+    vpChromaTypeReflectionDesc: "Preserves or adds reflections that match the digital environment on reflective surfaces.",
+    vpChromaTypeBackground: "Real-Time Background Replacement",
+    vpChromaTypeBackgroundDesc: "Replaces the keyed background with a digital image or environment during capture.",
+    vpChromaTypeCameraTracked: "Camera-Tracked Chroma Key",
+    vpChromaTypeCameraTrackedDesc: "Synchronises the composite environment with the position and perspective of a moving camera.",
+    vpChromaTypeLensCalibrated: "Lens-Calibrated Compositing",
+    vpChromaTypeLensCalibratedDesc: "Uses optical calibration to align distortion, focus and perspective between image and set.",
+    vpChromaTypeDepth: "Depth-Based Compositing",
+    vpChromaTypeDepthDesc: "Uses depth data to define occlusion and the spatial order of composited elements.",
+    vpChromaTypeMultiCamera: "Multi-Camera Chroma Key",
+    vpChromaTypeMultiCameraDesc: "Coordinates keying, colour and compositing across multiple cameras.",
+    vpChromaTypeHybridAR: "Hybrid Chroma Key + AR",
+    vpChromaTypeHybridARDesc: "Combines chroma keying with real-time augmented-reality graphics and objects.",
+    vpChromaTypeColourMatching: "Real-Time Colour Matching",
+    vpChromaTypeColourMatchingDesc: "Balances colour, exposure and contrast between the subject and digital environment in real time.",
+    vpChromaTypeVirtualSet: "Real-Time Virtual Set Integration",
+    vpChromaTypeVirtualSetDesc: "Integrates the keyed subject into a tracked 3D set composited in real time.",
+    vpMotionCaptureTag: "Motion Capture",
+    vpMotionCapture: "Motion Capture",
+    vpMotionCaptureDesc: "Motion capture and performance synchronization.",
+    vpMotionTypeOptical: "Optical Motion Capture",
+    vpMotionTypeOpticalDesc: "Cameras capture markers or visual features to reconstruct movement in 3D.",
+    vpMotionTypeMarkerBased: "Marker-Based Motion Capture",
+    vpMotionTypeMarkerBasedDesc: "Markers worn on the body are tracked by cameras to measure movement precisely.",
+    vpMotionTypeMarkerless: "Markerless Motion Capture",
+    vpMotionTypeMarkerlessDesc: "Computer vision estimates body pose and movement without physical markers.",
+    vpMotionTypeInertial: "Inertial Motion Capture",
+    vpMotionTypeInertialDesc: "Body-worn inertial sensors estimate orientation and movement without external cameras.",
+    vpMotionTypeMagnetic: "Magnetic Motion Capture",
+    vpMotionTypeMagneticDesc: "Sensors measure position and orientation using magnetic fields generated by the system.",
+    vpMotionTypeMechanical: "Mechanical Motion Capture",
+    vpMotionTypeMechanicalDesc: "An exoskeleton or articulated rig mechanically measures body movement.",
+    vpMotionTypeFacial: "Facial Motion Capture",
+    vpMotionTypeFacialDesc: "Records facial expressions and movement to drive a digital character.",
+    vpMotionTypeBody: "Body Motion Capture",
+    vpMotionTypeBodyDesc: "Captures body movement to reconstruct a performer's pose and actions.",
+    vpMotionTypeHand: "Hand and Finger Tracking",
+    vpMotionTypeHandDesc: "Tracks hands and fingers to reproduce gestures and fine movements in real time.",
+    vpMotionTypePerformance: "Performance Capture",
+    vpMotionTypePerformanceDesc: "Combines body and, when needed, facial movement to record a complete performance.",
+    vpMotionTypeRealtime: "Real-Time Motion Capture",
+    vpMotionTypeRealtimeDesc: "Streams motion data during capture for immediate viewing and use.",
+    vpMotionTypeRetargeting: "Live Retargeting",
+    vpMotionTypeRetargetingDesc: "Maps captured movement live onto a digital character's rig and proportions.",
+    vpMotionTypeCharacterAnimation: "Virtual Character Animation",
+    vpMotionTypeCharacterAnimationDesc: "Animates a digital character using captured data or virtual animation controls.",
+    vpMotionTypeMultiActor: "Multi-Actor Motion Capture",
+    vpMotionTypeMultiActorDesc: "Captures several performers at once while keeping their movement separate and synchronised.",
+    vpMotionTypeHybrid: "Hybrid Motion Capture",
+    vpMotionTypeHybridDesc: "Combines optical, inertial or other methods to improve coverage and continuity.",
+    vpMotionTypeFullBody: "Full-Body Tracking",
+    vpMotionTypeFullBodyDesc: "Tracks the entire body to produce an articulated pose from head to toe.",
+    vpMotionTypeProps: "Props Tracking",
+    vpMotionTypePropsDesc: "Tracks props to synchronise their position and rotation with the performance.",
+    vpMotionTypeCameraIntegration: "Camera Tracking Integration",
+    vpMotionTypeCameraIntegrationDesc: "Synchronises body capture with camera tracking and virtual-environment coordinates.",
+    vpPerformanceCaptureTag: "Performance Capture",
+    vpPerformanceCapture: "Performance Capture",
+    vpPerformanceCaptureDesc: "Performance recording with tracking and analysis.",
+    vpRealtimeRenderingTag: "Rendering",
+    vpRealtimeRendering: "Real-Time Rendering",
+    vpRealtimeRenderingDesc: "Real-time rendering for monitoring and validation.",
+    vpVirtualCamerasTag: "Virtual Cameras",
+    vpVirtualCameras: "Virtual Cameras",
+    vpVirtualCamerasDesc: "Control of virtual cameras and digital composition.",
+    vpPhysicalDigitalTag: "Integration",
+    vpPhysicalDigital: "Physical-Digital Integration",
+    vpPhysicalDigitalDesc: "Synchronization between physical and digital elements.",
+    vpAugmentedXRTag: "AR + XR",
+    vpAugmentedXR: "Augmented Reality and XR",
+    vpAugmentedXRDesc: "Augmented reality, extended reality and visual integration.",
+    vpRemoteProductionTag: "Remote",
+    vpRemoteProduction: "Remote Production",
+    vpRemoteProductionDesc: "Remote production and distributed collaboration.",
+    vpVirtualBroadcastTag: "Broadcast",
+    vpVirtualBroadcast: "Virtual Broadcast",
+    vpVirtualBroadcastDesc: "Virtual broadcast operations in a digital environment.",
+    vpWorkflowTag: "Workflow",
+    vpWorkflow: "Virtual Production Workflow",
+    vpWorkflowDesc: "Complete virtual production flow, validation and execution.",
+    vpBrainstormTag: "Brainstorm",
+    vpBrainstorm: "Brainstorm",
+    vpBrainstormDesc: "Ideation, creative exploration and concept development for virtual production.",
     areaVideoteca: "Film Library",
-    areaVideotecaDesc: "Access to videos and technical references",
+    areaVideotecaDesc: "Film and audiovisual collection for reference",
+    libraryLocationLabel: "Location",
+    libraryContactsLabel: "Contacts",
+    libraryUseNote: "All materials are for educational use and research purposes.",
+    libraryWarningLabel: "Notice:",
+    libraryReturnWarning: "Any DVD not returned within 30 days will be charged to the student's account at five times its original price.",
+    libraryEntranceCaption: "Film Library entrance",
+    libraryEntranceDescription: "Access to Universidade Lusófona's audiovisual collection.",
+    libraryCollectionCaption: "Film collection",
+    libraryCollectionDescription: "View of the entrance and shelves with films available for consultation.",
     areaVideotecaTitle: "Film Library",
     areaReshape: "Reshape",
-    areaReshapeDesc: "Area prepared for new procedures",
+    areaReshapeDesc: "Portal to view and manage studio, room and equipment bookings.",
+    reshapeLoginCaption: "Login",
+    reshapeLoginDescription: "Secure access to the Reshape portal.",
+    reshapeOverviewCaption: "Overview page",
+    reshapeOverviewDescription: "Area for viewing and managing room and equipment requests.",
+    reshapeOpenPortal: "Open Reshape portal",
     areaStudiosTitle: "Studio Rules",
 
     generalProcedures: "General Procedures",
@@ -377,9 +1075,13 @@ const ui = {
     backButton: "← Back",
 
     security: "Safety",
+    securityCardTitle: "Studio Safety",
     bookings: "Bookings",
+    bookingsCardTitle: "Booking Information",
     cleaning: "Cleaning",
+    cleaningCardTitle: "Cleaning Instructions",
     equipment: "Equipment",
+    equipmentCardTitle: "Available Equipment",
 
     securityDesc: "Essential rules for safety, circulation, cables and responsible use of spaces.",
     bookingsDesc: "Booking, confirmation, use and cancellation of spaces and equipment.",
@@ -449,10 +1151,10 @@ const studioRules = {
       "<strong>9. No Final da Utilização</strong>\n<ul>\n  <li>Desligar equipamentos.</li>\n  <li>Recolher cabos.</li>\n  <li>Arrumar tripés e acessórios.</li>\n  <li>Confirmar que o estúdio fica limpo.</li>\n  <li>Reportar qualquer dano.</li>\n</ul>"
     ],
     reservas: [
-      "<strong>Como efetuar uma reserva</strong>\n<p>As reservas dos estúdios podem ser efetuadas através da plataforma <strong>Reshape</strong> ou por <strong>e-mail</strong> para o Departamento de Cinema e Artes dos Media.</p>\n<p>Sempre que possível, deverá ser utilizada a plataforma <strong>Reshape</strong>, por permitir uma gestão mais eficiente da ocupação dos espaços.</p>",
-      "<strong>Informação necessária</strong>\n<p>Ao efetuar uma reserva, deverão ser indicados os seguintes elementos:</p>\n<ul>\n  <li>Nome do responsável pela reserva;</li>\n  <li>Unidade curricular, projeto ou atividade;</li>\n  <li>Estúdio pretendido;</li>\n  <li>Data da utilização;</li>\n  <li>Hora de início e hora de fim;</li>\n  <li>Equipamentos adicionais, quando necessários.</li>\n</ul>",
+      "<strong>Como efetuar uma reserva</strong>\n<p>As reservas dos estúdios podem ser efetuadas através da plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou por <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>e-mail</strong></a> para o Departamento de Cinema e Artes dos Media.</p>\n<p>Sempre que possível, deverá ser utilizada a plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a>, por permitir uma gestão mais eficiente da ocupação dos espaços.</p>",
+      "<strong>Informação necessária</strong>\n<p>Ao efetuar uma reserva, deverão ser indicados os seguintes elementos:</p>\n<ul>\n  <li>Nome do responsável pela reserva;</li>\n  <li>Unidade curricular, projeto ou atividade;</li>\n  <li>Estúdio pretendido;</li>\n  <li>Data da utilização;</li>\n  <li>Hora de início e hora de fim;</li>\n  <li>Equipamentos adicionais, quando necessários.</li>\n</ul><br>",
       "<strong>Confirmação da reserva</strong>\n<p>A reserva apenas é considerada válida após confirmação pelo Departamento de Cinema e Artes dos Media.</p>\n<p>Antes da utilização do espaço, deverá ser verificado que a reserva foi confirmada e que o horário e o estúdio atribuídos correspondem ao solicitado.</p>",
-      "<strong>Alterações e cancelamentos</strong>\n<p>Sempre que uma reserva deixe de ser necessária ou sofra alterações, o utilizador deverá proceder ao seu cancelamento no <strong>Reshape</strong> ou comunicar essa alteração por <strong>e-mail</strong>, com a maior antecedência possível.</p>\n<p>O cancelamento atempado permite disponibilizar o estúdio para outros utilizadores.</p>",
+      "<strong>Alterações e cancelamentos</strong>\n<p>Sempre que uma reserva deixe de ser necessária ou sofra alterações, o utilizador deverá proceder ao seu cancelamento no <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou comunicar essa alteração por <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>e-mail</strong></a>, com a maior antecedência possível.</p>\n<p>O cancelamento atempado permite disponibilizar o estúdio para outros utilizadores.</p>",
       "<strong>Utilização do estúdio</strong>\n<p>O período reservado deverá contemplar todas as fases da atividade, incluindo:</p>\n<ul>\n  <li>Montagem;</li>\n  <li>Ensaios;</li>\n  <li>Produção ou gravação;</li>\n  <li>Desmontagem;</li>\n  <li>Limpeza e organização final.</li>\n</ul>\n<p>Não é permitida a permanência no estúdio para além do horário reservado sem autorização prévia.</p>",
       "<strong>Responsabilidade</strong>\n<p>O responsável pela reserva é também responsável pela correta utilização do estúdio durante todo o período de ocupação, garantindo o cumprimento das normas de segurança, a boa utilização dos equipamentos e a entrega do espaço em condições adequadas para a utilização seguinte.</p>",
       "<strong>Entrega do espaço</strong>\n<p>No final da utilização deverá ser confirmado que:</p>\n<ul>\n  <li>Todos os equipamentos utilizados foram desligados;</li>\n  <li>O material foi devidamente arrumado;</li>\n  <li>O espaço ficou limpo e organizado;</li>\n  <li>Qualquer dano ou anomalia foi comunicado ao Departamento de Cinema e Artes dos Media.</li>\n</ul>"
@@ -494,10 +1196,10 @@ const studioRules = {
       "<strong>9. End of Use</strong>\n<ul>\n  <li>Turn off equipment.</li>\n  <li>Collect cables.</li>\n  <li>Store tripods and accessories.</li>\n  <li>Ensure the studio is left clean.</li>\n  <li>Report any damage.</li>\n</ul>"
     ],
     reservas: [
-      "<strong>How to make a reservation</strong>\n<p>Studio reservations can be made through the <strong>Reshape</strong> platform or by <strong>email</strong> to the Department of Cinema and Media Arts.</p>\n<p>Whenever possible, the <strong>Reshape</strong> platform should be used, as it enables more efficient management of space occupancy.</p>",
-      "<strong>Required information</strong>\n<p>When making a reservation, the following details should be provided:</p>\n<ul>\n  <li>Name of the person responsible for the booking;</li>\n  <li>Course unit, project or activity;</li>\n  <li>Requested studio;</li>\n  <li>Date of use;</li>\n  <li>Start and end time;</li>\n  <li>Any additional equipment required.</li>\n</ul>",
+      "<strong>How to make a reservation</strong>\n<p>Studio reservations can be made through the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform or by <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>email</strong></a> to the Department of Cinema and Media Arts.</p>\n<p>Whenever possible, the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform should be used, as it enables more efficient management of space occupancy.</p>",
+      "<strong>Required information</strong>\n<p>When making a reservation, the following details should be provided:</p>\n<ul>\n  <li>Name of the person responsible for the booking;</li>\n  <li>Course unit, project or activity;</li>\n  <li>Requested studio;</li>\n  <li>Date of use;</li>\n  <li>Start and end time;</li>\n  <li>Any additional equipment required.</li>\n</ul><br>",
       "<strong>Reservation confirmation</strong>\n<p>A reservation is only considered valid after confirmation by the Department of Cinema and Media Arts.</p>\n<p>Prior to using the space, verify that the reservation has been confirmed and that the assigned time and studio match the request.</p>",
-      "<strong>Changes and cancellations</strong>\n<p>If a reservation is no longer needed or requires changes, the user should cancel it on <strong>Reshape</strong> or notify the Department by <strong>email</strong> as early as possible.</p>\n<p>Timely cancellations make the studio available for other users.</p>",
+      "<strong>Changes and cancellations</strong>\n<p>If a reservation is no longer needed or requires changes, the user should cancel it on <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> or notify the Department by <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>email</strong></a> as early as possible.</p>\n<p>Timely cancellations make the studio available for other users.</p>",
       "<strong>Use of the studio</strong>\n<p>The reserved period should cover all phases of the activity, including:</p>\n<ul>\n  <li>Setup;</li>\n  <li>Rehearsals;</li>\n  <li>Production or recording;</li>\n  <li>Teardown;</li>\n  <li>Cleaning and final organisation.</li>\n</ul>\n<p>Staying in the studio beyond the reserved time is not permitted without prior authorisation.</p>",
       "<strong>Responsibility</strong>\n<p>The person responsible for the reservation is also accountable for the correct use of the studio during the entire occupancy period, ensuring compliance with safety rules, proper equipment use and leaving the space in suitable condition for the next user.</p>",
       "<strong>Handover</strong>\n<p>At the end of the reservation, confirm that:</p>\n<ul>\n  <li>All used equipment has been switched off;</li>\n  <li>Materials have been properly stored;</li>\n  <li>The space is clean and organised;</li>\n  <li>Any damage or anomaly has been reported to the Department of Cinema and Media Arts.</li>\n</ul>"
@@ -567,6 +1269,8 @@ const aboutTexts = {
       <li><strong>v14</strong> — Português / Inglês.</li>
       <li><strong>v15</strong> — Responsividade e identidade visual.</li>
       <li><strong>v16</strong> — Evolução para INFO-ON.</li>
+      <li><strong>v17</strong> — Categorias de Produção Virtual com páginas e descrições próprias.</li>
+      <li><strong>v18</strong> — Ordem de execução em Previs e melhorias de navegação.</li>
     </ul>
   `,
 
@@ -589,6 +1293,8 @@ const aboutTexts = {
       <li><strong>v14</strong> — Portuguese / English.</li>
       <li><strong>v15</strong> — Responsiveness and visual identity.</li>
       <li><strong>v16</strong> — Evolution to INFO-ON.</li>
+      <li><strong>v17</strong> — Virtual Production categories with dedicated pages and descriptions.</li>
+      <li><strong>v18</strong> — Previs execution order and navigation improvements.</li>
     </ul>
   `
 };
@@ -602,6 +1308,8 @@ let currentLanguage = localStorage.getItem("infoon_language") || "pt";
 let procedures = proceduresData[currentLanguage];
 let activeProcedure = null;
 let activeProcedureId = null;
+let activeRuleId = null;
+let activeVPTitleKey = null;
 
 
 // =====================================================
@@ -623,6 +1331,38 @@ function setLanguage(lang) {
     document.getElementById("procedure-title").textContent = activeProcedure.title;
     renderSteps();
   }
+
+  if (activeRuleId) {
+    openRule(activeRuleId);
+  }
+
+  if (activeVPTitleKey) {
+    updateVPBreadcrumb(activeVPTitleKey);
+  }
+}
+
+function createLanguageSwitcher() {
+  const switcher = document.createElement("div");
+  switcher.className = "language-switcher";
+  switcher.innerHTML = `
+    <button type="button" class="lang-pt-btn" data-lang="pt">PT</button>
+    <button type="button" class="lang-en-btn" data-lang="en">EN</button>
+  `;
+
+  switcher.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  });
+
+  return switcher;
+}
+
+function injectLanguageSwitchers() {
+  document.querySelectorAll(".section-top").forEach((top) => {
+    if (top.querySelector(".language-switcher")) return;
+
+    const switcher = createLanguageSwitcher();
+    top.appendChild(switcher);
+  });
 }
 
 function applyTranslations() {
@@ -635,6 +1375,10 @@ function applyTranslations() {
 
   document.getElementById("lang-pt")?.classList.toggle("active", currentLanguage === "pt");
   document.getElementById("lang-en")?.classList.toggle("active", currentLanguage === "en");
+
+  document.querySelectorAll(".lang-pt-btn, .lang-en-btn").forEach((button) => {
+    button.classList.toggle("active", currentLanguage === button.dataset.lang);
+  });
 }
 
 
@@ -650,6 +1394,7 @@ function hideAll() {
     "area-regie",
     "procedure-view",
     "area-vp",
+    "vp-detail",
     "area-videoteca",
     "area-reshape"
   ].forEach((id) => {
@@ -664,6 +1409,7 @@ function goHome() {
 }
 
 function openArea(area) {
+  activeVPTitleKey = null;
   hideAll();
   const target = document.getElementById(`area-${area}`);
   if (!target) {
@@ -675,12 +1421,151 @@ function openArea(area) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function openVPPage(titleKey) {
+  activeVPTitleKey = titleKey;
+  const isTypeDetail = titleKey.startsWith("vpType") || titleKey.startsWith("vpLedType") || titleKey.startsWith("vpTrackingType") || titleKey.startsWith("vpPrevisType") || titleKey.startsWith("vpScoutingType") || titleKey.startsWith("vpSetExtensionType") || titleKey.startsWith("vpLightingType") || titleKey.startsWith("vpChromaType") || titleKey.startsWith("vpMotionType");
+  updateVPBreadcrumb(titleKey);
+  document.getElementById("vp-virtual-set-types").classList.toggle("hidden", titleKey !== "vpVirtualSets");
+  document.getElementById("vp-led-volume-types").classList.toggle("hidden", titleKey !== "vpLedVolume");
+  document.getElementById("vp-camera-tracking-types").classList.toggle("hidden", titleKey !== "vpCameraTracking");
+  document.getElementById("vp-previsualisation-types").classList.toggle("hidden", titleKey !== "vpPrevisualisation");
+  document.getElementById("vp-virtual-scouting-types").classList.toggle("hidden", titleKey !== "vpVirtualScouting");
+  document.getElementById("vp-set-extension-types").classList.toggle("hidden", titleKey !== "vpSetExtension");
+  document.getElementById("vp-virtual-lighting-types").classList.toggle("hidden", titleKey !== "vpVirtualLighting");
+  document.getElementById("vp-chroma-types").classList.toggle("hidden", titleKey !== "vpChroma");
+  document.getElementById("vp-motion-capture-types").classList.toggle("hidden", titleKey !== "vpMotionCapture");
+  document.getElementById("vp-previs-order-note").classList.toggle("hidden", titleKey !== "vpPrevisualisation");
+  document.getElementById("vp-type-description").classList.toggle("hidden", !isTypeDetail);
+  document.getElementById("vp-type-description").dataset.i18n = `${titleKey}Desc`;
+  document.getElementById("vp-type-description").textContent = isTypeDetail ? ui[currentLanguage][`${titleKey}Desc`] : "";
+  const wipTitleKey = titleKey === "vpVirtualSets" ? "wipTitle" : "vpWipTitle";
+  const wipTextKey = titleKey === "vpVirtualSets" ? "wipText" : "vpWipText";
+  const wipNotice = document.getElementById("vp-detail-wip");
+  const wipTitle = wipNotice.querySelector("strong");
+  const wipText = wipNotice.querySelector("span");
+  wipTitle.dataset.i18n = wipTitleKey;
+  wipText.dataset.i18n = wipTextKey;
+  wipTitle.textContent = ui[currentLanguage][wipTitleKey];
+  wipText.textContent = ui[currentLanguage][wipTextKey];
+  document.getElementById("vp-detail-wip").classList.toggle("hidden", isTypeDetail);
+  hideAll();
+  document.getElementById("vp-detail").classList.remove("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function updateVPBreadcrumb(titleKey) {
+  const isVirtualSetType = titleKey.startsWith("vpType");
+  const isLedVolumeType = titleKey.startsWith("vpLedType");
+  const isCameraTrackingType = titleKey.startsWith("vpTrackingType");
+  const isPrevisualisationType = titleKey.startsWith("vpPrevisType");
+  const isVirtualScoutingType = titleKey.startsWith("vpScoutingType");
+  const isSetExtensionType = titleKey.startsWith("vpSetExtensionType");
+  const isVirtualLightingType = titleKey.startsWith("vpLightingType");
+  const isChromaType = titleKey.startsWith("vpChromaType");
+  const isMotionCaptureType = titleKey.startsWith("vpMotionType");
+  const isTypeDetail = isVirtualSetType || isLedVolumeType || isCameraTrackingType || isPrevisualisationType || isVirtualScoutingType || isSetExtensionType || isVirtualLightingType || isChromaType || isMotionCaptureType;
+  const parentKey = isLedVolumeType || titleKey === "vpLedVolume"
+    ? "vpLedVolume"
+    : isCameraTrackingType || titleKey === "vpCameraTracking"
+      ? "vpCameraTracking"
+      : isPrevisualisationType || titleKey === "vpPrevisualisation"
+        ? "vpPrevisualisation"
+        : isVirtualScoutingType || titleKey === "vpVirtualScouting"
+          ? "vpVirtualScouting"
+          : isSetExtensionType || titleKey === "vpSetExtension"
+            ? "vpSetExtension"
+            : isVirtualLightingType || titleKey === "vpVirtualLighting"
+              ? "vpVirtualLighting"
+              : isChromaType || titleKey === "vpChroma"
+                ? "vpChroma"
+                : isMotionCaptureType || titleKey === "vpMotionCapture"
+                  ? "vpMotionCapture"
+                  : isVirtualSetType || titleKey === "vpVirtualSets"
+                    ? "vpVirtualSets"
+                    : titleKey;
+  const parentLink = document.getElementById("vp-breadcrumb-parent-link");
+  const parentCurrent = document.getElementById("vp-breadcrumb-parent-current");
+  parentLink.classList.toggle("hidden", !isTypeDetail);
+  parentCurrent.classList.toggle("hidden", isTypeDetail);
+  parentLink.dataset.i18n = parentKey;
+  parentCurrent.dataset.i18n = parentKey;
+  parentLink.textContent = ui[currentLanguage][parentKey];
+  parentCurrent.textContent = ui[currentLanguage][parentKey];
+  document.getElementById("vp-breadcrumb-type-separator").classList.toggle("hidden", !isTypeDetail);
+  document.getElementById("vp-breadcrumb-type").classList.toggle("hidden", !isTypeDetail);
+  document.getElementById("vp-breadcrumb-type").textContent = isTypeDetail ? ui[currentLanguage][titleKey] : "";
+}
+
+function openVPParent() {
+  if (activeVPTitleKey?.startsWith("vpLedType")) {
+    openVPPage("vpLedVolume");
+  } else if (activeVPTitleKey?.startsWith("vpTrackingType")) {
+    openVPPage("vpCameraTracking");
+  } else if (activeVPTitleKey?.startsWith("vpPrevisType")) {
+    openVPPage("vpPrevisualisation");
+  } else if (activeVPTitleKey?.startsWith("vpScoutingType")) {
+    openVPPage("vpVirtualScouting");
+  } else if (activeVPTitleKey?.startsWith("vpSetExtensionType")) {
+    openVPPage("vpSetExtension");
+  } else if (activeVPTitleKey?.startsWith("vpLightingType")) {
+    openVPPage("vpVirtualLighting");
+  } else if (activeVPTitleKey?.startsWith("vpChromaType")) {
+    openVPPage("vpChroma");
+  } else if (activeVPTitleKey?.startsWith("vpMotionType")) {
+    openVPPage("vpMotionCapture");
+  } else {
+    openVPPage("vpVirtualSets");
+  }
+}
+
+function closeVPPage() {
+  if (activeVPTitleKey?.startsWith("vpType")) {
+    openVPPage("vpVirtualSets");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpLedType")) {
+    openVPPage("vpLedVolume");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpTrackingType")) {
+    openVPPage("vpCameraTracking");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpPrevisType")) {
+    openVPPage("vpPrevisualisation");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpScoutingType")) {
+    openVPPage("vpVirtualScouting");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpSetExtensionType")) {
+    openVPPage("vpSetExtension");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpLightingType")) {
+    openVPPage("vpVirtualLighting");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpChromaType")) {
+    openVPPage("vpChroma");
+    return;
+  }
+  if (activeVPTitleKey?.startsWith("vpMotionType")) {
+    openVPPage("vpMotionCapture");
+    return;
+  }
+  activeVPTitleKey = null;
+  openArea("vp");
+}
+
 
 // =====================================================
 // RULES
 // =====================================================
 
 function openRule(id) {
+  activeRuleId = id;
   const title = ruleNames[currentLanguage][id];
   const rules = studioRules[currentLanguage][id];
 
@@ -693,21 +1578,13 @@ function openRule(id) {
     <article class="step-card">
       <div>
         <h3>${title}</h3>
-        <ul>
+        <ul class="${id === "seguranca" ? "safety-rules" : ""}">
           ${rules.map((item) => `<li>${item}</li>`).join("")}
         </ul>
-      </div>
-
-      <div class="media-box">
-        <div>
-          <strong>${ui[currentLanguage].mediaTitle}</strong>
-          <span>${ui[currentLanguage].mediaPlaceholder}</span>
-        </div>
       </div>
     </article>
   `;
 }
-
 
 // =====================================================
 // PROCEDURES
@@ -902,6 +1779,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  injectLanguageSwitchers();
   applyTranslations();
   updateMiniProgress();
 

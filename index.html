@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INFO-ON | Procedimentos Técnicos</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=18">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <section class="hero" id="home">
 <div class="hero-content">
 <div class="header-top">
-<img src="assets/logos/logo.jpg" alt="INFO-ON" class="logo-image">
+<a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="logo-image"></a>
 <div class="language-switcher">
 <button id="lang-pt" onclick="setLanguage('pt')">PT</button>
 <button id="lang-en" onclick="setLanguage('en')">EN</button>
@@ -26,31 +26,31 @@
 <button class="main-section-btn" onclick="openArea('regie')"><span class="main-icon">🎥</span><span class="main-section-title" data-i18n="areaRegie">Régie</span><span class="main-section-desc" data-i18n="areaRegieDesc">Arranque · Streaming · Encerramento</span></button>
 <button class="main-section-btn" onclick="openArea('vp')"><span class="main-icon">🕶️</span><span class="main-section-title" data-i18n="areaVP">VP - Produção Virtual</span><span class="main-section-desc" data-i18n="areaVPDesc">Produção virtual e estúdios virtuais</span></button>
 <button class="main-section-btn" onclick="openArea('videoteca')"><span class="main-icon">📚</span><span class="main-section-title" data-i18n="areaVideoteca">Videoteca</span><span class="main-section-desc" data-i18n="areaVideotecaDesc">Acesso a vídeos e referências técnicas</span></button>
-<button class="main-section-btn" onclick="openArea('reshape')"><span class="main-icon">🔧</span><span class="main-section-title" data-i18n="areaReshape">Reshape</span><span class="main-section-desc" data-i18n="areaReshapeDesc">Área preparada para novos procedimentos</span></button>
+<button class="main-section-btn" onclick="openArea('reshape')"><span class="main-icon">🔧</span><span class="main-section-title" data-i18n="areaReshape">Reshape</span><span class="main-section-desc" data-i18n="areaReshapeDesc">Portal de reservas e gestão dos estúdios.</span></button>
 </div>
 </div>
 </section>
 
 <section class="area hidden" id="area-estudios">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 data-i18n="areaStudiosTitle">Regras - Estúdios</h1>
 <div class="section-header"><div><p class="eyebrow" data-i18n="areaStudios">Regras dos Estúdios</p><h2 data-i18n="generalProcedures">Procedimentos Gerais</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
 <div class="procedure-grid">
-<article class="procedure-card active" onclick="openRule('seguranca')"><span class="tag red" data-i18n="security">Segurança</span><h3 data-i18n="security">Segurança</h3><p data-i18n="securityDesc">Regras essenciais de segurança, circulação, cabos e utilização responsável dos espaços.</p></article>
-<article class="procedure-card active" onclick="openRule('reservas')"><span class="tag blue" data-i18n="bookings">Reservas</span><h3 data-i18n="bookings">Reservas</h3><p data-i18n="bookingsDesc">Marcação, confirmação, utilização e cancelamento de espaços e equipamentos.</p></article>
-<article class="procedure-card active" onclick="openRule('limpeza')"><span class="tag green" data-i18n="cleaning">Limpeza</span><h3 data-i18n="cleaning">Limpeza</h3><p data-i18n="cleaningDesc">Organização, limpeza, arrumação e entrega dos estúdios após utilização.</p></article>
-<article class="procedure-card active" onclick="openRule('equipamentos')"><span class="tag orange" data-i18n="equipment">Equipamentos</span><h3 data-i18n="equipment">Equipamentos</h3><p data-i18n="equipmentDesc">Requisição, transporte, utilização, devolução e reporte de anomalias.</p></article>
+<article class="procedure-card active" onclick="openRule('seguranca')"><span class="tag red" data-i18n="security">Segurança</span><h3 data-i18n="securityCardTitle">Segurança no Estúdio</h3><p data-i18n="securityDesc">Regras essenciais de segurança, circulação, cabos e utilização responsável dos espaços.</p></article>
+<article class="procedure-card active" onclick="openRule('reservas')"><span class="tag blue" data-i18n="bookings">Reservas</span><h3 data-i18n="bookingsCardTitle">Informações sobre Reservas</h3><p data-i18n="bookingsDesc">Marcação, confirmação, utilização e cancelamento de espaços e equipamentos.</p></article>
+<article class="procedure-card active" onclick="openRule('limpeza')"><span class="tag green" data-i18n="cleaning">Limpeza</span><h3 data-i18n="cleaningCardTitle">Como fazer a limpeza</h3><p data-i18n="cleaningDesc">Organização, limpeza, arrumação e entrega dos estúdios após utilização.</p></article>
+<article class="procedure-card active" onclick="openRule('equipamentos')"><span class="tag orange" data-i18n="equipment">Equipamentos</span><h3 data-i18n="equipmentCardTitle">Equipamentos disponíveis</h3><p data-i18n="equipmentDesc">Requisição, transporte, utilização, devolução e reporte de anomalias.</p></article>
 </div>
 </section>
 
 <section class="area hidden" id="rule-view">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
 <div class="section-header"><div><h3 class="section-page-title" data-i18n="areaStudiosTitle">Regras - Estúdios</h3><p class="eyebrow" data-i18n="areaStudios">Regras dos Estúdios</p><h2 id="rule-title">Segurança</h2></div><button class="back-btn small-btn" onclick="openArea('estudios')" data-i18n="backButton">← Voltar</button></div>
 <div id="rule-content" class="steps"></div>
 </section>
 
 <section class="area hidden" id="area-regie">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaRegieTitle">Régie</h1>
 <div class="section-header"><div><p class="eyebrow" data-i18n="areaRegie">Régie</p><h2 data-i18n="regieProcedures">Procedimentos da Régie</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
 <div class="procedure-grid">
@@ -62,7 +62,7 @@
 </section>
 
 <section class="procedure-view hidden" id="procedure-view">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
 <div class="procedure-view-header"><h1 class="section-page-title" data-i18n="areaRegieTitle">Régie</h1></div>
 <div class="procedure-topbar"><button class="back-btn" onclick="closeProcedure()" data-i18n="backButton">← Voltar</button><div><p class="eyebrow" data-i18n="activeProcedure">Procedimento ativo</p><h2 id="procedure-title">Ligar a Régie</h2></div></div>
 <div class="status-panel"><div><strong id="progress-text">0% concluído</strong><p data-i18n="progressSaved">O progresso fica guardado neste dispositivo.</p></div><div class="progress-bar"><span id="progress-bar"></span></div></div>
@@ -71,32 +71,223 @@
 </section>
 
 <section class="area hidden" id="area-vp">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaVPTitle">VP - Produção Virtual</h1>
-<div class="section-header"><div><p class="eyebrow" data-i18n="areaVP">VP - Produção Virtual</p><h2 data-i18n="areaVPDesc">Produção virtual e estúdios virtuais</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
-<div class="wip-notice"><strong data-i18n="vpWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="vpWipText">Esta área receberá procedimentos e orientações para produção virtual.</span></div>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaVP">VP - Produção Virtual</p><h2 data-i18n="areaVPDesc">Virtual Sets</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="procedure-grid">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpVirtualSets'); return false;"><span class="tag purple" data-i18n="vpVirtualSetsTag">Virtual Sets</span><h3 data-i18n="vpCardVirtualSets">Tipos de Cenários Virtuais</h3><p data-i18n="vpVirtualSetsDesc">Criação e gestão de cenários digitais para produção virtual.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedVolume'); return false;"><span class="tag blue" data-i18n="vpLedVolumeTag">LED Volume</span><h3 data-i18n="vpCardLedVolume">Técnicas de LED Volume e ICVFX</h3><p data-i18n="vpLedVolumeDesc">Integração de volume LED e efeitos visuais em câmara.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpCameraTracking'); return false;"><span class="tag green" data-i18n="vpCameraTrackingTag">Tracking</span><h3 data-i18n="vpCardCameraTracking">Métodos de Camera Tracking</h3><p data-i18n="vpCameraTrackingDesc">Rastreio da câmara e alinhamento do set virtual.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisualisation'); return false;"><span class="tag orange" data-i18n="vpPrevisualisationTag">Previsualisation</span><h3 data-i18n="vpCardPrevisualisation">Planeamento e Pré-visualização</h3><p data-i18n="vpPrevisualisationDesc">Validação visual e planeamento antes da gravação.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpVirtualScouting'); return false;"><span class="tag red" data-i18n="vpVirtualScoutingTag">Scouting</span><h3 data-i18n="vpCardVirtualScouting">Métodos de Virtual Scouting</h3><p data-i18n="vpVirtualScoutingDesc">Exploração de cenários e posicionamentos virtuais.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtension'); return false;"><span class="tag blue" data-i18n="vpSetExtensionTag">Set Extension</span><h3 data-i18n="vpCardSetExtension">Técnicas de Set Extension</h3><p data-i18n="vpSetExtensionDesc">Ampliação do cenário físico com elementos virtuais.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpVirtualLighting'); return false;"><span class="tag green" data-i18n="vpVirtualLightingTag">Virtual Lighting</span><h3 data-i18n="vpCardVirtualLighting">Técnicas de Iluminação Virtual</h3><p data-i18n="vpVirtualLightingDesc">Iluminação virtual e composição em tempo real.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChroma'); return false;"><span class="tag orange" data-i18n="vpChromaTag">Chroma</span><h3 data-i18n="vpCardChroma">Composição Chroma Key em Tempo Real</h3><p data-i18n="vpChromaDesc">Chroma key em tempo real e integração da imagem.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionCapture'); return false;"><span class="tag red" data-i18n="vpMotionCaptureTag">Motion Capture</span><h3 data-i18n="vpCardMotionCapture">Métodos de Captura de Movimento</h3><p data-i18n="vpMotionCaptureDesc">Captura de movimento e sincronização de performance.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPerformanceCapture'); return false;"><span class="tag blue" data-i18n="vpPerformanceCaptureTag">Performance Capture</span><h3 data-i18n="vpCardPerformanceCapture">Captura de Performance</h3><p data-i18n="vpPerformanceCaptureDesc">Gravação de performance com tracking e análise.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpRealtimeRendering'); return false;"><span class="tag green" data-i18n="vpRealtimeRenderingTag">Rendering</span><h3 data-i18n="vpCardRealtimeRendering">Renderização em Tempo Real</h3><p data-i18n="vpRealtimeRenderingDesc">Renderização em tempo real para monitorização e validação.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpVirtualCameras'); return false;"><span class="tag orange" data-i18n="vpVirtualCamerasTag">Virtual Cameras</span><h3 data-i18n="vpCardVirtualCameras">Sistemas de Câmara Virtual</h3><p data-i18n="vpVirtualCamerasDesc">Controlo de câmaras virtuais e composição digital.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPhysicalDigital'); return false;"><span class="tag red" data-i18n="vpPhysicalDigitalTag">Integration</span><h3 data-i18n="vpCardPhysicalDigital">Integração Física-Digital</h3><p data-i18n="vpPhysicalDigitalDesc">Sincronização entre elementos físicos e digitais.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpAugmentedXR'); return false;"><span class="tag blue" data-i18n="vpAugmentedXRTag">AR + XR</span><h3 data-i18n="vpCardAugmentedXR">Realidade Aumentada e Estendida</h3><p data-i18n="vpAugmentedXRDesc">Realidade aumentada, realidade estendida e integração visual.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpRemoteProduction'); return false;"><span class="tag green" data-i18n="vpRemoteProductionTag">Remote</span><h3 data-i18n="vpCardRemoteProduction">Produção Virtual Remota</h3><p data-i18n="vpRemoteProductionDesc">Produção remota e colaboração distribuída.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpVirtualBroadcast'); return false;"><span class="tag orange" data-i18n="vpVirtualBroadcastTag">Broadcast</span><h3 data-i18n="vpCardVirtualBroadcast">Emissão em Estúdio Virtual</h3><p data-i18n="vpVirtualBroadcastDesc">Emissão virtual e operação de transmissão em ambiente digital.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpWorkflow'); return false;"><span class="tag red" data-i18n="vpWorkflowTag">Workflow</span><h3 data-i18n="vpCardWorkflow">Fluxo de Trabalho de Produção Virtual</h3><p data-i18n="vpWorkflowDesc">Fluxo completo de produção virtual, validação e execução.</p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpBrainstorm'); return false;"><span class="tag purple" data-i18n="vpBrainstormTag">Brainstorm</span><h3 data-i18n="vpCardBrainstorm">Ideação em Produção Virtual</h3><p data-i18n="vpBrainstormDesc">Ideação, exploração criativa e desenvolvimento de conceitos para produção virtual.</p></a>
+</div>
+</section>
+
+<section class="area hidden" id="vp-detail">
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
+<h1 class="section-page-title" data-i18n="areaVPTitle">VP - Produção Virtual</h1>
+<div class="section-header"><nav class="vp-breadcrumb" aria-label="Breadcrumb"><a href="#vp" onclick="openArea('vp'); return false;" data-i18n="areaVPTitle">VP - Produção Virtual</a><span aria-hidden="true">/</span><a id="vp-breadcrumb-parent-link" class="hidden" href="#vp-detail" onclick="openVPParent(); return false;"></a><span id="vp-breadcrumb-parent-current" aria-current="page"></span><span id="vp-breadcrumb-type-separator" class="hidden" aria-hidden="true">/</span><span id="vp-breadcrumb-type" class="hidden" aria-current="page"></span></nav><button class="small-btn" onclick="closeVPPage()" data-i18n="backButton">← Voltar</button></div>
+<p id="vp-previs-order-note" class="vp-previs-order-note hidden" data-i18n="vpPrevisOrderNote">Os itens numerados abaixo seguem uma ordem de execução recomendada.</p>
+<div id="vp-virtual-set-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeLedVolume'); return false;"><h3 data-i18n="vpTypeLedVolume">LED Volume Sets</h3><p data-i18n="vpTypeLedVolumeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeGreenScreen'); return false;"><h3 data-i18n="vpTypeGreenScreen">Green Screen Virtual Sets</h3><p data-i18n="vpTypeGreenScreenDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeXR'); return false;"><h3 data-i18n="vpTypeXR">Extended Reality (XR) Sets</h3><p data-i18n="vpTypeXRDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeAR'); return false;"><h3 data-i18n="vpTypeAR">Augmented Reality (AR) Sets</h3><p data-i18n="vpTypeARDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeMR'); return false;"><h3 data-i18n="vpTypeMR">Mixed Reality (MR) Sets</h3><p data-i18n="vpTypeMRDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeFullyVirtual'); return false;"><h3 data-i18n="vpTypeFullyVirtual">Fully Virtual Sets</h3><p data-i18n="vpTypeFullyVirtualDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeHybrid'); return false;"><h3 data-i18n="vpTypeHybrid">Hybrid Physical-Virtual Sets</h3><p data-i18n="vpTypeHybridDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeSetExtensions'); return false;"><h3 data-i18n="vpTypeSetExtensions">Digital Set Extensions</h3><p data-i18n="vpTypeSetExtensionsDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeRealtime3D'); return false;"><h3 data-i18n="vpTypeRealtime3D">Real-Time 3D Environments</h3><p data-i18n="vpTypeRealtime3DDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeStudio'); return false;"><h3 data-i18n="vpTypeStudio">Virtual Studio Sets</h3><p data-i18n="vpTypeStudioDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeImmersive'); return false;"><h3 data-i18n="vpTypeImmersive">Immersive Virtual Environments</h3><p data-i18n="vpTypeImmersiveDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTypeProjection'); return false;"><h3 data-i18n="vpTypeProjection">Projection-Based Virtual Sets</h3><p data-i18n="vpTypeProjectionDesc"></p></a>
+</div>
+<div id="vp-led-volume-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeFull'); return false;"><h3 data-i18n="vpLedTypeFull">Full LED Volume</h3><p data-i18n="vpLedTypeFullDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypePartial'); return false;"><h3 data-i18n="vpLedTypePartial">Partial LED Volume</h3><p data-i18n="vpLedTypePartialDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeCurvedWall'); return false;"><h3 data-i18n="vpLedTypeCurvedWall">Curved LED Wall</h3><p data-i18n="vpLedTypeCurvedWallDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeFlatWall'); return false;"><h3 data-i18n="vpLedTypeFlatWall">Flat LED Wall</h3><p data-i18n="vpLedTypeFlatWallDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedType360'); return false;"><h3 data-i18n="vpLedType360">360° LED Volume</h3><p data-i18n="vpLedType360Desc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeCeiling'); return false;"><h3 data-i18n="vpLedTypeCeiling">LED Ceiling</h3><p data-i18n="vpLedTypeCeilingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeFloor'); return false;"><h3 data-i18n="vpLedTypeFloor">LED Floor</h3><p data-i18n="vpLedTypeFloorDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeMultiWall'); return false;"><h3 data-i18n="vpLedTypeMultiWall">Multi-Wall LED Stage</h3><p data-i18n="vpLedTypeMultiWallDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedType25D'); return false;"><h3 data-i18n="vpLedType25D">2.5D In-Camera VFX</h3><p data-i18n="vpLedType25DDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeRealtime3D'); return false;"><h3 data-i18n="vpLedTypeRealtime3D">Real-Time 3D In-Camera VFX</h3><p data-i18n="vpLedTypeRealtime3DDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeVideoPlate'); return false;"><h3 data-i18n="vpLedTypeVideoPlate">Video Plate Playback</h3><p data-i18n="vpLedTypeVideoPlateDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeSetExtension'); return false;"><h3 data-i18n="vpLedTypeSetExtension">Digital Set Extension</h3><p data-i18n="vpLedTypeSetExtensionDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeFrustum'); return false;"><h3 data-i18n="vpLedTypeFrustum">Frustum-Based Rendering</h3><p data-i18n="vpLedTypeFrustumDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeMultiCamera'); return false;"><h3 data-i18n="vpLedTypeMultiCamera">Multi-Camera ICVFX</h3><p data-i18n="vpLedTypeMultiCameraDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLedTypeHybrid'); return false;"><h3 data-i18n="vpLedTypeHybrid">Hybrid LED + Green Screen Workflow</h3><p data-i18n="vpLedTypeHybridDesc"></p></a>
+</div>
+<div id="vp-camera-tracking-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeOptical'); return false;"><h3 data-i18n="vpTrackingTypeOptical">Optical Tracking</h3><p data-i18n="vpTrackingTypeOpticalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeMarkerBased'); return false;"><h3 data-i18n="vpTrackingTypeMarkerBased">Marker-Based Tracking</h3><p data-i18n="vpTrackingTypeMarkerBasedDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeMarkerless'); return false;"><h3 data-i18n="vpTrackingTypeMarkerless">Markerless Tracking</h3><p data-i18n="vpTrackingTypeMarkerlessDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeInfrared'); return false;"><h3 data-i18n="vpTrackingTypeInfrared">Infrared Tracking</h3><p data-i18n="vpTrackingTypeInfraredDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeInsideOut'); return false;"><h3 data-i18n="vpTrackingTypeInsideOut">Inside-Out Tracking</h3><p data-i18n="vpTrackingTypeInsideOutDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeOutsideIn'); return false;"><h3 data-i18n="vpTrackingTypeOutsideIn">Outside-In Tracking</h3><p data-i18n="vpTrackingTypeOutsideInDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeMechanical'); return false;"><h3 data-i18n="vpTrackingTypeMechanical">Mechanical Tracking</h3><p data-i18n="vpTrackingTypeMechanicalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeEncoder'); return false;"><h3 data-i18n="vpTrackingTypeEncoder">Encoder-Based Tracking</h3><p data-i18n="vpTrackingTypeEncoderDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeInertial'); return false;"><h3 data-i18n="vpTrackingTypeInertial">Inertial Tracking</h3><p data-i18n="vpTrackingTypeInertialDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeHybrid'); return false;"><h3 data-i18n="vpTrackingTypeHybrid">Hybrid Tracking</h3><p data-i18n="vpTrackingTypeHybridDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeLens'); return false;"><h3 data-i18n="vpTrackingTypeLens">Lens Tracking</h3><p data-i18n="vpTrackingTypeLensDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeFreeRoaming'); return false;"><h3 data-i18n="vpTrackingTypeFreeRoaming">Free-Roaming Camera Tracking</h3><p data-i18n="vpTrackingTypeFreeRoamingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeDollyRail'); return false;"><h3 data-i18n="vpTrackingTypeDollyRail">Dolly / Rail Tracking</h3><p data-i18n="vpTrackingTypeDollyRailDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeCraneJib'); return false;"><h3 data-i18n="vpTrackingTypeCraneJib">Crane / Jib Tracking</h3><p data-i18n="vpTrackingTypeCraneJibDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpTrackingTypeVirtualCamera'); return false;"><h3 data-i18n="vpTrackingTypeVirtualCamera">Virtual Camera Tracking</h3><p data-i18n="vpTrackingTypeVirtualCameraDesc"></p></a>
+</div>
+<div id="vp-previsualisation-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypePitchvis'); return false;"><h3 data-i18n="vpPrevisTypePitchvis">Pitchvis</h3><p data-i18n="vpPrevisTypePitchvisDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypePrevis'); return false;"><h3 data-i18n="vpPrevisTypePrevis">Previs</h3><p data-i18n="vpPrevisTypePrevisDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeTechvis'); return false;"><h3 data-i18n="vpPrevisTypeTechvis">Techvis</h3><p data-i18n="vpPrevisTypeTechvisDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeStuntvis'); return false;"><h3 data-i18n="vpPrevisTypeStuntvis">Stuntvis</h3><p data-i18n="vpPrevisTypeStuntvisDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypePostvis'); return false;"><h3 data-i18n="vpPrevisTypePostvis">Postvis</h3><p data-i18n="vpPrevisTypePostvisDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeScouting'); return false;"><h3 data-i18n="vpPrevisTypeScouting">Virtual Scouting</h3><p data-i18n="vpPrevisTypeScoutingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeShotPlanning'); return false;"><h3 data-i18n="vpPrevisTypeShotPlanning">Shot Planning</h3><p data-i18n="vpPrevisTypeShotPlanningDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeCameraBlocking'); return false;"><h3 data-i18n="vpPrevisTypeCameraBlocking">Camera Blocking</h3><p data-i18n="vpPrevisTypeCameraBlockingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeLighting'); return false;"><h3 data-i18n="vpPrevisTypeLighting">Lighting Previs</h3><p data-i18n="vpPrevisTypeLightingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeAnimation'); return false;"><h3 data-i18n="vpPrevisTypeAnimation">Animation Previs</h3><p data-i18n="vpPrevisTypeAnimationDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypeEnvironment'); return false;"><h3 data-i18n="vpPrevisTypeEnvironment">Environment Previs</h3><p data-i18n="vpPrevisTypeEnvironmentDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpPrevisTypePerformance'); return false;"><h3 data-i18n="vpPrevisTypePerformance">Performance Previs</h3><p data-i18n="vpPrevisTypePerformanceDesc"></p></a>
+</div>
+<div id="vp-virtual-scouting-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeDesktop'); return false;"><h3 data-i18n="vpScoutingTypeDesktop">Desktop Virtual Scouting</h3><p data-i18n="vpScoutingTypeDesktopDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeVR'); return false;"><h3 data-i18n="vpScoutingTypeVR">VR Virtual Scouting</h3><p data-i18n="vpScoutingTypeVRDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeCollaborative'); return false;"><h3 data-i18n="vpScoutingTypeCollaborative">Collaborative Virtual Scouting</h3><p data-i18n="vpScoutingTypeCollaborativeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeRealtime'); return false;"><h3 data-i18n="vpScoutingTypeRealtime">Real-Time Virtual Scouting</h3><p data-i18n="vpScoutingTypeRealtimeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeEnvironment'); return false;"><h3 data-i18n="vpScoutingTypeEnvironment">Environment Scouting</h3><p data-i18n="vpScoutingTypeEnvironmentDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeCamera'); return false;"><h3 data-i18n="vpScoutingTypeCamera">Camera Scouting</h3><p data-i18n="vpScoutingTypeCameraDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeLighting'); return false;"><h3 data-i18n="vpScoutingTypeLighting">Lighting Scouting</h3><p data-i18n="vpScoutingTypeLightingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeSetDesign'); return false;"><h3 data-i18n="vpScoutingTypeSetDesign">Set Design Scouting</h3><p data-i18n="vpScoutingTypeSetDesignDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeBlocking'); return false;"><h3 data-i18n="vpScoutingTypeBlocking">Blocking and Staging Scouting</h3><p data-i18n="vpScoutingTypeBlockingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpScoutingTypeTechnical'); return false;"><h3 data-i18n="vpScoutingTypeTechnical">Technical Scouting</h3><p data-i18n="vpScoutingTypeTechnicalDesc"></p></a>
+</div>
+<div id="vp-set-extension-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeDigital'); return false;"><h3 data-i18n="vpSetExtensionTypeDigital">Digital Set Extension</h3><p data-i18n="vpSetExtensionTypeDigitalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionType25D'); return false;"><h3 data-i18n="vpSetExtensionType25D">2.5D Set Extension</h3><p data-i18n="vpSetExtensionType25DDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionType3D'); return false;"><h3 data-i18n="vpSetExtensionType3D">3D Set Extension</h3><p data-i18n="vpSetExtensionType3DDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeLED'); return false;"><h3 data-i18n="vpSetExtensionTypeLED">LED Set Extension</h3><p data-i18n="vpSetExtensionTypeLEDDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeGreenScreen'); return false;"><h3 data-i18n="vpSetExtensionTypeGreenScreen">Green Screen Set Extension</h3><p data-i18n="vpSetExtensionTypeGreenScreenDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeMattePainting'); return false;"><h3 data-i18n="vpSetExtensionTypeMattePainting">Matte Painting Extension</h3><p data-i18n="vpSetExtensionTypeMattePaintingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeProjection'); return false;"><h3 data-i18n="vpSetExtensionTypeProjection">Projection-Based Set Extension</h3><p data-i18n="vpSetExtensionTypeProjectionDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeRealtime'); return false;"><h3 data-i18n="vpSetExtensionTypeRealtime">Real-Time Set Extension</h3><p data-i18n="vpSetExtensionTypeRealtimeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeInCamera'); return false;"><h3 data-i18n="vpSetExtensionTypeInCamera">In-Camera Set Extension</h3><p data-i18n="vpSetExtensionTypeInCameraDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypePostProduction'); return false;"><h3 data-i18n="vpSetExtensionTypePostProduction">Post-Production Set Extension</h3><p data-i18n="vpSetExtensionTypePostProductionDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeHybrid'); return false;"><h3 data-i18n="vpSetExtensionTypeHybrid">Hybrid Physical-Digital Set Extension</h3><p data-i18n="vpSetExtensionTypeHybridDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpSetExtensionTypeEnvironment'); return false;"><h3 data-i18n="vpSetExtensionTypeEnvironment">Environment Extension</h3><p data-i18n="vpSetExtensionTypeEnvironmentDesc"></p></a>
+</div>
+<div id="vp-virtual-lighting-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeRealtime'); return false;"><h3 data-i18n="vpLightingTypeRealtime">Real-Time Lighting</h3><p data-i18n="vpLightingTypeRealtimeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeIBL'); return false;"><h3 data-i18n="vpLightingTypeIBL">Image-Based Lighting (IBL)</h3><p data-i18n="vpLightingTypeIBLDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeHDRI'); return false;"><h3 data-i18n="vpLightingTypeHDRI">HDRI Lighting</h3><p data-i18n="vpLightingTypeHDRIDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeEnvironment'); return false;"><h3 data-i18n="vpLightingTypeEnvironment">Environment Lighting</h3><p data-i18n="vpLightingTypeEnvironmentDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeLEDVolume'); return false;"><h3 data-i18n="vpLightingTypeLEDVolume">LED Volume Lighting</h3><p data-i18n="vpLightingTypeLEDVolumeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeInteractive'); return false;"><h3 data-i18n="vpLightingTypeInteractive">Interactive Lighting</h3><p data-i18n="vpLightingTypeInteractiveDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeDynamic'); return false;"><h3 data-i18n="vpLightingTypeDynamic">Dynamic Lighting</h3><p data-i18n="vpLightingTypeDynamicDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypePractical'); return false;"><h3 data-i18n="vpLightingTypePractical">Practical-to-Virtual Lighting</h3><p data-i18n="vpLightingTypePracticalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeKey'); return false;"><h3 data-i18n="vpLightingTypeKey">Virtual Key Lighting</h3><p data-i18n="vpLightingTypeKeyDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeFill'); return false;"><h3 data-i18n="vpLightingTypeFill">Virtual Fill Lighting</h3><p data-i18n="vpLightingTypeFillDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeBack'); return false;"><h3 data-i18n="vpLightingTypeBack">Virtual Backlighting</h3><p data-i18n="vpLightingTypeBackDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeEmissive'); return false;"><h3 data-i18n="vpLightingTypeEmissive">Emissive Lighting</h3><p data-i18n="vpLightingTypeEmissiveDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeReflection'); return false;"><h3 data-i18n="vpLightingTypeReflection">Reflection Lighting</h3><p data-i18n="vpLightingTypeReflectionDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeShadow'); return false;"><h3 data-i18n="vpLightingTypeShadow">Shadow Matching</h3><p data-i18n="vpLightingTypeShadowDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeLinking'); return false;"><h3 data-i18n="vpLightingTypeLinking">Light Linking</h3><p data-i18n="vpLightingTypeLinkingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeDMX'); return false;"><h3 data-i18n="vpLightingTypeDMX">DMX-Controlled Virtual Lighting</h3><p data-i18n="vpLightingTypeDMXDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypePBR'); return false;"><h3 data-i18n="vpLightingTypePBR">Physically Based Lighting</h3><p data-i18n="vpLightingTypePBRDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpLightingTypeHybrid'); return false;"><h3 data-i18n="vpLightingTypeHybrid">Hybrid Physical-Virtual Lighting</h3><p data-i18n="vpLightingTypeHybridDesc"></p></a>
+</div>
+<div id="vp-chroma-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeGreenScreen'); return false;"><h3 data-i18n="vpChromaTypeGreenScreen">Green Screen Keying</h3><p data-i18n="vpChromaTypeGreenScreenDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeBlueScreen'); return false;"><h3 data-i18n="vpChromaTypeBlueScreen">Blue Screen Keying</h3><p data-i18n="vpChromaTypeBlueScreenDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeCompositing'); return false;"><h3 data-i18n="vpChromaTypeCompositing">Real-Time Compositing</h3><p data-i18n="vpChromaTypeCompositingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeMultiLayer'); return false;"><h3 data-i18n="vpChromaTypeMultiLayer">Multi-Layer Compositing</h3><p data-i18n="vpChromaTypeMultiLayerDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeMatte'); return false;"><h3 data-i18n="vpChromaTypeMatte">Garbage Matte / Holdout Matte</h3><p data-i18n="vpChromaTypeMatteDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeSpill'); return false;"><h3 data-i18n="vpChromaTypeSpill">Spill Suppression</h3><p data-i18n="vpChromaTypeSpillDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeEdge'); return false;"><h3 data-i18n="vpChromaTypeEdge">Edge Refinement</h3><p data-i18n="vpChromaTypeEdgeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeLightWrap'); return false;"><h3 data-i18n="vpChromaTypeLightWrap">Light Wrap</h3><p data-i18n="vpChromaTypeLightWrapDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeShadow'); return false;"><h3 data-i18n="vpChromaTypeShadow">Shadow Integration</h3><p data-i18n="vpChromaTypeShadowDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeReflection'); return false;"><h3 data-i18n="vpChromaTypeReflection">Reflection Integration</h3><p data-i18n="vpChromaTypeReflectionDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeBackground'); return false;"><h3 data-i18n="vpChromaTypeBackground">Real-Time Background Replacement</h3><p data-i18n="vpChromaTypeBackgroundDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeCameraTracked'); return false;"><h3 data-i18n="vpChromaTypeCameraTracked">Camera-Tracked Chroma Key</h3><p data-i18n="vpChromaTypeCameraTrackedDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeLensCalibrated'); return false;"><h3 data-i18n="vpChromaTypeLensCalibrated">Lens-Calibrated Compositing</h3><p data-i18n="vpChromaTypeLensCalibratedDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeDepth'); return false;"><h3 data-i18n="vpChromaTypeDepth">Depth-Based Compositing</h3><p data-i18n="vpChromaTypeDepthDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeMultiCamera'); return false;"><h3 data-i18n="vpChromaTypeMultiCamera">Multi-Camera Chroma Key</h3><p data-i18n="vpChromaTypeMultiCameraDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeHybridAR'); return false;"><h3 data-i18n="vpChromaTypeHybridAR">Hybrid Chroma Key + AR</h3><p data-i18n="vpChromaTypeHybridARDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeColourMatching'); return false;"><h3 data-i18n="vpChromaTypeColourMatching">Real-Time Colour Matching</h3><p data-i18n="vpChromaTypeColourMatchingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpChromaTypeVirtualSet'); return false;"><h3 data-i18n="vpChromaTypeVirtualSet">Real-Time Virtual Set Integration</h3><p data-i18n="vpChromaTypeVirtualSetDesc"></p></a>
+</div>
+<div id="vp-motion-capture-types" class="procedure-grid hidden">
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeOptical'); return false;"><h3 data-i18n="vpMotionTypeOptical">Optical Motion Capture</h3><p data-i18n="vpMotionTypeOpticalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeMarkerBased'); return false;"><h3 data-i18n="vpMotionTypeMarkerBased">Marker-Based Motion Capture</h3><p data-i18n="vpMotionTypeMarkerBasedDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeMarkerless'); return false;"><h3 data-i18n="vpMotionTypeMarkerless">Markerless Motion Capture</h3><p data-i18n="vpMotionTypeMarkerlessDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeInertial'); return false;"><h3 data-i18n="vpMotionTypeInertial">Inertial Motion Capture</h3><p data-i18n="vpMotionTypeInertialDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeMagnetic'); return false;"><h3 data-i18n="vpMotionTypeMagnetic">Magnetic Motion Capture</h3><p data-i18n="vpMotionTypeMagneticDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeMechanical'); return false;"><h3 data-i18n="vpMotionTypeMechanical">Mechanical Motion Capture</h3><p data-i18n="vpMotionTypeMechanicalDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeFacial'); return false;"><h3 data-i18n="vpMotionTypeFacial">Facial Motion Capture</h3><p data-i18n="vpMotionTypeFacialDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeBody'); return false;"><h3 data-i18n="vpMotionTypeBody">Body Motion Capture</h3><p data-i18n="vpMotionTypeBodyDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeHand'); return false;"><h3 data-i18n="vpMotionTypeHand">Hand and Finger Tracking</h3><p data-i18n="vpMotionTypeHandDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypePerformance'); return false;"><h3 data-i18n="vpMotionTypePerformance">Performance Capture</h3><p data-i18n="vpMotionTypePerformanceDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeRealtime'); return false;"><h3 data-i18n="vpMotionTypeRealtime">Real-Time Motion Capture</h3><p data-i18n="vpMotionTypeRealtimeDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeRetargeting'); return false;"><h3 data-i18n="vpMotionTypeRetargeting">Live Retargeting</h3><p data-i18n="vpMotionTypeRetargetingDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeCharacterAnimation'); return false;"><h3 data-i18n="vpMotionTypeCharacterAnimation">Virtual Character Animation</h3><p data-i18n="vpMotionTypeCharacterAnimationDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeMultiActor'); return false;"><h3 data-i18n="vpMotionTypeMultiActor">Multi-Actor Motion Capture</h3><p data-i18n="vpMotionTypeMultiActorDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeHybrid'); return false;"><h3 data-i18n="vpMotionTypeHybrid">Hybrid Motion Capture</h3><p data-i18n="vpMotionTypeHybridDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeFullBody'); return false;"><h3 data-i18n="vpMotionTypeFullBody">Full-Body Tracking</h3><p data-i18n="vpMotionTypeFullBodyDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeProps'); return false;"><h3 data-i18n="vpMotionTypeProps">Props Tracking</h3><p data-i18n="vpMotionTypePropsDesc"></p></a>
+<a class="procedure-card active" href="#vp-detail" onclick="openVPPage('vpMotionTypeCameraIntegration'); return false;"><h3 data-i18n="vpMotionTypeCameraIntegration">Camera Tracking Integration</h3><p data-i18n="vpMotionTypeCameraIntegrationDesc"></p></a>
+</div>
+<p id="vp-type-description" class="hidden"></p>
+<div id="vp-detail-wip" class="wip-notice"><strong data-i18n="vpWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="vpWipText">Esta área receberá procedimentos e orientações para produção virtual.</span></div>
 </section>
 
 <section class="area hidden" id="area-videoteca">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaVideotecaTitle">Videoteca</h1>
-<div class="section-header"><div><p class="eyebrow" data-i18n="areaVideoteca">Videoteca</p><h2 data-i18n="areaVideotecaDesc">Acesso a vídeos e referências técnicas</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
-<div class="wip-notice"><strong data-i18n="videotecaWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="videotecaWipText">Esta área receberá procedimentos e orientações para Videoteca.</span></div>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaVideoteca">Videoteca</p><h2 data-i18n="areaVideotecaDesc">Coleção audiovisual para consulta</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="library-layout">
+<div class="library-info">
+<dl class="library-details">
+<div><dt data-i18n="libraryLocationLabel">Localização</dt><dd>Q.1.7</dd></div>
+<div><dt data-i18n="libraryContactsLabel">Contactos</dt><dd><a href="mailto:joana.vieira@ulusofona.pt">joana.vieira@ulusofona.pt</a><a href="mailto:ines.teixeira@ulusofona.pt">ines.teixeira@ulusofona.pt</a></dd></div>
+</dl>
+<p class="library-use-note" data-i18n="libraryUseNote">Todo o material é para utilização educativa e para fins de pesquisa.</p>
+<p class="library-return-warning"><strong data-i18n="libraryWarningLabel">Aviso:</strong> <span data-i18n="libraryReturnWarning">Qualquer DVD não devolvido no prazo de 30 dias será debitado na conta do aluno pelo valor de cinco vezes o preço original.</span></p>
+</div>
+<div class="library-gallery">
+<figure><figcaption data-i18n="libraryCollectionCaption">Coleção de filmes</figcaption><p class="library-image-description" data-i18n="libraryCollectionDescription">Vista da porta e das estantes com filmes disponíveis para consulta.</p><img src="assets/imagens/LIB/2.jpeg" alt="Outra vista da entrada e das estantes da Film Library"></figure>
+</div>
+</div>
 </section>
 
 <section class="area hidden" id="area-reshape">
-<div class="section-top"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></div>
+<div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaReshape">Reshape</h1>
-<div class="section-header"><div><p class="eyebrow" data-i18n="areaReshape">Reshape</p><h2 data-i18n="areaReshapeDesc">Área preparada para novos procedimentos</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
-<div class="wip-notice"><strong data-i18n="reshapeWipTitle">Brevemente — Área em desenvolvimento</strong><span data-i18n="reshapeWipText">Esta área receberá procedimentos e orientações para o Reshape.</span></div>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaReshape">Reshape</p><h2 data-i18n="areaReshapeDesc">Portal de reservas e gestão dos estúdios</h2><a class="primary-btn reshape-open-link" href="https://secure.ensinolusofona.pt/reshape/" target="_blank" rel="noopener noreferrer" data-i18n="reshapeOpenPortal">Abrir portal Reshape</a></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="reshape-gallery">
+<figure><figcaption data-i18n="reshapeLoginCaption">Login</figcaption><p class="reshape-image-description" data-i18n="reshapeLoginDescription">Acesso protegido ao portal Reshape.</p><img src="assets/imagens/Reshape/1.png" alt="Ecrã de login do portal Reshape"></figure>
+<figure><figcaption data-i18n="reshapeOverviewCaption">Página geral</figcaption><p class="reshape-image-description" data-i18n="reshapeOverviewDescription">Área para consultar e gerir requisições de salas e equipamentos.</p><img src="assets/imagens/Reshape/2.png" alt="Página geral de requisições do Reshape"></figure>
+</div>
 </section>
 
 <section class="suggestions" id="sugestoes"><div class="suggestions-card"><p class="eyebrow" data-i18n="contribute">Contribuir</p><h2 data-i18n="suggestionsTitle">Sugestões e correções</h2><p class="suggestion-text" data-i18n="suggestionsText">Este documento encontra-se em desenvolvimento contínuo. Para sugerir melhorias ou reportar erros, contacte:</p><p class="email">joao.aguiar@ulusofona.pt</p></div></section>
-<footer class="footer"><button class="version-badge" onclick="openAboutModal()">INFO-ON v16</button></footer>
+<footer class="footer"><button class="version-badge" onclick="openAboutModal()">INFO-ON v18</button></footer>
 </main>
 
 <div id="imageModal" class="image-modal"><span class="close-modal" onclick="closeImage()">×</span><img id="modalImage" class="modal-image"></div>
-<div id="aboutModal" class="about-modal"><div class="about-content"><button class="close-about" onclick="closeAboutModal()">×</button><div class="about-header"><h2>INFO-ON v16</h2><div class="language-switcher about-language"><button id="about-pt" onclick="setAboutLanguage('pt')">PT</button><button id="about-en" onclick="setAboutLanguage('en')">EN</button></div></div><div id="about-content"></div></div></div>
-<script src="script.js"></script>
+<div id="aboutModal" class="about-modal"><div class="about-content"><button class="close-about" onclick="closeAboutModal()">×</button><div class="about-header"><h2>INFO-ON v18</h2><div class="language-switcher about-language"><button id="about-pt" onclick="setAboutLanguage('pt')">PT</button><button id="about-en" onclick="setAboutLanguage('en')">EN</button></div></div><div id="about-content"></div></div></div>
+<script src="script.js?v=3"></script>
 </body>
 </html>

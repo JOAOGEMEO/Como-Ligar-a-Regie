@@ -64,6 +64,17 @@ button {
     display: block
 }
 
+.home-logo-link {
+    display: block;
+    cursor: pointer;
+    flex-shrink: 0
+}
+
+.home-logo-link:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 5px
+}
+
 .language-switcher {
     display: inline-flex;
     gap: 6px;
@@ -209,6 +220,20 @@ h3 {
     margin-top: 0
 }
 
+#vp-previsualisation-types {
+    counter-reset: previs-order
+}
+
+#vp-previsualisation-types .procedure-card::before {
+    counter-increment: previs-order;
+    content: counter(previs-order, decimal-leading-zero);
+    display: block;
+    margin-bottom: 8px;
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 900
+}
+
 .main-section-btn,
 .procedure-card {
     border: 1px solid var(--line);
@@ -273,6 +298,194 @@ h3 {
     margin-left: auto
 }
 
+.vp-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    border-left: 3px solid var(--red);
+    padding: 8px 0 8px 14px;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase
+}
+
+.vp-breadcrumb a {
+    color: inherit;
+    text-decoration: none
+}
+
+.vp-breadcrumb a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+.vp-breadcrumb [aria-hidden="true"] {
+    color: var(--red)
+}
+
+.vp-breadcrumb [aria-current="page"] {
+    color: #fff;
+    font-weight: 900
+}
+
+.vp-previs-order-note {
+    margin: 0 0 20px;
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.5
+}
+
+.reshape-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 760px;
+    margin-top: 24px
+}
+
+#area-reshape .section-header>div {
+    flex: 1;
+    text-align: left
+}
+
+.reshape-gallery figure {
+    margin: 0
+}
+
+.reshape-gallery figcaption {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 700
+}
+
+.reshape-image-description {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45
+}
+
+.reshape-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff
+}
+
+.reshape-open-link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 12px;
+    white-space: nowrap;
+    text-decoration: none
+}
+
+.library-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 24px auto 0
+}
+
+.library-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 440px);
+    justify-content: center;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto
+}
+
+.library-details {
+    display: grid;
+    gap: 24px;
+    margin: 0
+}
+
+.library-details>div {
+    display: grid;
+    gap: 4px
+}
+
+.library-details dt {
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 800
+}
+
+.library-details dd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5
+}
+
+.library-details a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px
+}
+
+.library-use-note {
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5
+}
+
+.library-return-warning {
+    margin: 24px 0 0;
+    border-left: 3px solid var(--red);
+    padding: 12px 14px;
+    background: rgba(239, 68, 68, .08);
+    color: #f4f4f4;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+.library-gallery figure {
+    margin: 0
+}
+
+.library-gallery figcaption {
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center
+}
+
+.library-image-description {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
+    text-align: center
+}
+
+.library-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 4px
+}
+
 #rule-view .section-header {
     align-items: flex-end;
 }
@@ -307,7 +520,12 @@ h3 {
 .procedure-card {
     min-height: 188px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    text-decoration: none
+}
+
+.procedure-card.active {
+    cursor: pointer
 }
 
 .procedure-card.disabled {
@@ -336,6 +554,11 @@ h3 {
 .orange {
     background: rgba(245, 158, 11, .22);
     color: #fcd34d
+}
+
+.purple {
+    background: rgba(168, 85, 247, .22);
+    color: #d8b4fe
 }
 
 .red {
@@ -421,6 +644,18 @@ h3 {
 .finish-panel p {
     color: var(--muted);
     line-height: 1.55
+}
+
+#rule-content a[href^="https://secure.ensinolusofona.pt/reshape/"] {
+    color: #fff
+}
+
+#rule-content a[href^="mailto:joao.aguiar@ulusofona.pt"] {
+    color: #fff
+}
+
+.safety-rules > li + li {
+    margin-top: 14px
 }
 
 .step-card ul {
@@ -585,7 +820,9 @@ h3 {
 
 .section-top {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
     margin-bottom: 22px
 }
 
@@ -593,6 +830,10 @@ h3 {
     width: min(240px, 45vw);
     height: auto;
     display: block
+}
+
+.section-top .language-switcher {
+    margin-left: auto
 }
 
 .header-logo {
@@ -648,6 +889,19 @@ h3 {
     .main-sections,
     .procedure-grid {
         grid-template-columns: 1fr
+    }
+
+    .reshape-gallery {
+        grid-template-columns: 1fr
+    }
+
+    .library-gallery {
+        grid-template-columns: 1fr
+    }
+
+    .library-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px
     }
 
     .section-header,

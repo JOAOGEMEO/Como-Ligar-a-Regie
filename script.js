@@ -621,6 +621,7 @@ const ui = {
     areaVideotecaDesc: "Coleção audiovisual para consulta",
     libraryLocationLabel: "Localização",
     libraryContactsLabel: "Contactos",
+    libraryUseTitle: "Utilização responsável",
     libraryUseNote: "Todos os DVDs disponibilizados destinam-se exclusivamente à visualização, ao estudo e à pesquisa, no âmbito de atividades educativas, académicas e culturais. O seu conteúdo poderá ser utilizado como material de apoio à aprendizagem, à análise e ao desenvolvimento de trabalhos de investigação.",
     libraryUseRestrictions: "Estes materiais não se destinam à comercialização, reprodução, distribuição pública ou utilização com fins lucrativos. A sua consulta deverá ser feita de forma responsável, respeitando os direitos de autor, a propriedade intelectual e a legislação aplicável.",
     libraryWarningLabel: "Aviso:",
@@ -637,6 +638,10 @@ const ui = {
     reshapeOverviewCaption: "Página geral",
     reshapeOverviewDescription: "Área para consultar e gerir requisições de salas e equipamentos.",
     reshapeOpenPortal: "Abrir portal Reshape",
+    reshapeAccessEyebrow: "Acesso online",
+    reshapeAccessTitle: "Faça a sua reserva no Reshape",
+    reshapeAccessText: "Consulte a disponibilidade e faça a gestão de requisições de estúdios, salas e equipamentos através do portal.",
+    reshapeStep: "Passo",
     areaStudiosTitle: "Regras - Estúdios",
 
     generalProcedures: "Procedimentos Gerais",
@@ -1052,6 +1057,7 @@ const ui = {
     areaVideotecaDesc: "Film and audiovisual collection for reference",
     libraryLocationLabel: "Location",
     libraryContactsLabel: "Contacts",
+    libraryUseTitle: "Responsible use",
     libraryUseNote: "All DVDs made available are intended exclusively for viewing, study, and research within the scope of educational, academic, and cultural activities. Their content may be used as supporting material for learning, analysis, and the development of research projects.",
     libraryUseRestrictions: "These materials are not intended for sale, reproduction, public distribution, or use for profit. They must be consulted responsibly, with due respect for copyright, intellectual property, and applicable legislation.",
     libraryWarningLabel: "Notice:",
@@ -1068,6 +1074,10 @@ const ui = {
     reshapeOverviewCaption: "Overview page",
     reshapeOverviewDescription: "Area for viewing and managing room and equipment requests.",
     reshapeOpenPortal: "Open Reshape portal",
+    reshapeAccessEyebrow: "Online access",
+    reshapeAccessTitle: "Make your booking in Reshape",
+    reshapeAccessText: "Check availability and manage requests for studios, rooms and equipment through the portal.",
+    reshapeStep: "Step",
     areaStudiosTitle: "Studio Rules",
 
     generalProcedures: "General Procedures",
@@ -1153,10 +1163,10 @@ const studioRules = {
       "<strong>9. No Final da Utilização</strong>\n<ul>\n  <li>Desligar equipamentos.</li>\n  <li>Recolher cabos.</li>\n  <li>Arrumar tripés e acessórios.</li>\n  <li>Confirmar que o estúdio fica limpo.</li>\n  <li>Reportar qualquer dano.</li>\n</ul>"
     ],
     reservas: [
-      "<strong>Como efetuar uma reserva</strong>\n<p>As reservas dos estúdios podem ser efetuadas através da plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou por <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>e-mail</strong></a> para o Departamento de Cinema e Artes dos Media.</p>\n<p>Sempre que possível, deverá ser utilizada a plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a>, por permitir uma gestão mais eficiente da ocupação dos espaços.</p>",
+      "<strong>Como efetuar uma reserva</strong>\n<p>As reservas dos estúdios podem ser efetuadas através da plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou por e-mail para <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>joao.aguiar@ulusofona.pt</strong></a> ou <a href=\"mailto:joana.vieira@ulusofona.pt\"><strong>joana.vieira@ulusofona.pt</strong></a>.</p>\n<p>Sempre que possível, deverá ser utilizada a plataforma <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a>, por permitir uma gestão mais eficiente da ocupação dos espaços.</p>",
       "<strong>Informação necessária</strong>\n<p>Ao efetuar uma reserva, deverão ser indicados os seguintes elementos:</p>\n<ul>\n  <li>Nome do responsável pela reserva;</li>\n  <li>Unidade curricular, projeto ou atividade;</li>\n  <li>Estúdio pretendido;</li>\n  <li>Data da utilização;</li>\n  <li>Hora de início e hora de fim;</li>\n  <li>Equipamentos adicionais, quando necessários.</li>\n</ul><br>",
       "<strong>Confirmação da reserva</strong>\n<p>A reserva apenas é considerada válida após confirmação pelo Departamento de Cinema e Artes dos Media.</p>\n<p>Antes da utilização do espaço, deverá ser verificado que a reserva foi confirmada e que o horário e o estúdio atribuídos correspondem ao solicitado.</p>",
-      "<strong>Alterações e cancelamentos</strong>\n<p>Sempre que uma reserva deixe de ser necessária ou sofra alterações, o utilizador deverá proceder ao seu cancelamento no <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou comunicar essa alteração por <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>e-mail</strong></a>, com a maior antecedência possível.</p>\n<p>O cancelamento atempado permite disponibilizar o estúdio para outros utilizadores.</p>",
+      "<strong>Alterações e cancelamentos</strong>\n<p>Sempre que uma reserva deixe de ser necessária ou sofra alterações, o utilizador deverá proceder ao seu cancelamento no <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> ou comunicar essa alteração para <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>joao.aguiar@ulusofona.pt</strong></a> ou <a href=\"mailto:joana.vieira@ulusofona.pt\"><strong>joana.vieira@ulusofona.pt</strong></a>, com a maior antecedência possível.</p>\n<p>O cancelamento atempado permite disponibilizar o estúdio para outros utilizadores.</p>",
       "<strong>Utilização do estúdio</strong>\n<p>O período reservado deverá contemplar todas as fases da atividade, incluindo:</p>\n<ul>\n  <li>Montagem;</li>\n  <li>Ensaios;</li>\n  <li>Produção ou gravação;</li>\n  <li>Desmontagem;</li>\n  <li>Limpeza e organização final.</li>\n</ul>\n<p>Não é permitida a permanência no estúdio para além do horário reservado sem autorização prévia.</p>",
       "<strong>Responsabilidade</strong>\n<p>O responsável pela reserva é também responsável pela correta utilização do estúdio durante todo o período de ocupação, garantindo o cumprimento das normas de segurança, a boa utilização dos equipamentos e a entrega do espaço em condições adequadas para a utilização seguinte.</p>",
       "<strong>Entrega do espaço</strong>\n<p>No final da utilização deverá ser confirmado que:</p>\n<ul>\n  <li>Todos os equipamentos utilizados foram desligados;</li>\n  <li>O material foi devidamente arrumado;</li>\n  <li>O espaço ficou limpo e organizado;</li>\n  <li>Qualquer dano ou anomalia foi comunicado ao Departamento de Cinema e Artes dos Media.</li>\n</ul>"
@@ -1198,10 +1208,10 @@ const studioRules = {
       "<strong>9. End of Use</strong>\n<ul>\n  <li>Turn off equipment.</li>\n  <li>Collect cables.</li>\n  <li>Store tripods and accessories.</li>\n  <li>Ensure the studio is left clean.</li>\n  <li>Report any damage.</li>\n</ul>"
     ],
     reservas: [
-      "<strong>How to make a reservation</strong>\n<p>Studio reservations can be made through the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform or by <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>email</strong></a> to the Department of Cinema and Media Arts.</p>\n<p>Whenever possible, the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform should be used, as it enables more efficient management of space occupancy.</p>",
+      "<strong>How to make a reservation</strong>\n<p>Studio reservations can be made through the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform or by email to <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>joao.aguiar@ulusofona.pt</strong></a> or <a href=\"mailto:joana.vieira@ulusofona.pt\"><strong>joana.vieira@ulusofona.pt</strong></a>.</p>\n<p>Whenever possible, the <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> platform should be used, as it enables more efficient management of space occupancy.</p>",
       "<strong>Required information</strong>\n<p>When making a reservation, the following details should be provided:</p>\n<ul>\n  <li>Name of the person responsible for the booking;</li>\n  <li>Course unit, project or activity;</li>\n  <li>Requested studio;</li>\n  <li>Date of use;</li>\n  <li>Start and end time;</li>\n  <li>Any additional equipment required.</li>\n</ul><br>",
       "<strong>Reservation confirmation</strong>\n<p>A reservation is only considered valid after confirmation by the Department of Cinema and Media Arts.</p>\n<p>Prior to using the space, verify that the reservation has been confirmed and that the assigned time and studio match the request.</p>",
-      "<strong>Changes and cancellations</strong>\n<p>If a reservation is no longer needed or requires changes, the user should cancel it on <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> or notify the Department by <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>email</strong></a> as early as possible.</p>\n<p>Timely cancellations make the studio available for other users.</p>",
+      "<strong>Changes and cancellations</strong>\n<p>If a reservation is no longer needed or requires changes, the user should cancel it on <a href=\"https://secure.ensinolusofona.pt/reshape/\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Reshape</strong></a> or notify <a href=\"mailto:joao.aguiar@ulusofona.pt\"><strong>joao.aguiar@ulusofona.pt</strong></a> or <a href=\"mailto:joana.vieira@ulusofona.pt\"><strong>joana.vieira@ulusofona.pt</strong></a> as early as possible.</p>\n<p>Timely cancellations make the studio available for other users.</p>",
       "<strong>Use of the studio</strong>\n<p>The reserved period should cover all phases of the activity, including:</p>\n<ul>\n  <li>Setup;</li>\n  <li>Rehearsals;</li>\n  <li>Production or recording;</li>\n  <li>Teardown;</li>\n  <li>Cleaning and final organisation.</li>\n</ul>\n<p>Staying in the studio beyond the reserved time is not permitted without prior authorisation.</p>",
       "<strong>Responsibility</strong>\n<p>The person responsible for the reservation is also accountable for the correct use of the studio during the entire occupancy period, ensuring compliance with safety rules, proper equipment use and leaving the space in suitable condition for the next user.</p>",
       "<strong>Handover</strong>\n<p>At the end of the reservation, confirm that:</p>\n<ul>\n  <li>All used equipment has been switched off;</li>\n  <li>Materials have been properly stored;</li>\n  <li>The space is clean and organised;</li>\n  <li>Any damage or anomaly has been reported to the Department of Cinema and Media Arts.</li>\n</ul>"
@@ -1258,21 +1268,14 @@ const aboutTexts = {
 
     <h3>Histórico de versões</h3>
     <ul class="version-list">
-      <li><strong>v1-v4</strong> — Estrutura inicial e protótipos.</li>
-      <li><strong>v5</strong> — Primeira versão profissional.</li>
-      <li><strong>v6</strong> — Procedimentos completos.</li>
-      <li><strong>v7</strong> — Melhorias de navegação.</li>
-      <li><strong>v8</strong> — Documento Work in Progress.</li>
-      <li><strong>v9</strong> — Streaming dedicado.</li>
-      <li><strong>v10</strong> — Estrutura centrada.</li>
-      <li><strong>v11</strong> — Melhorias organizacionais.</li>
-      <li><strong>v12</strong> — Consolidação técnica.</li>
-      <li><strong>v13</strong> — Sistema de imagens locais.</li>
-      <li><strong>v14</strong> — Português / Inglês.</li>
-      <li><strong>v15</strong> — Responsividade e identidade visual.</li>
-      <li><strong>v16</strong> — Evolução para INFO-ON.</li>
-      <li><strong>v17</strong> — Categorias de Produção Virtual com páginas e descrições próprias.</li>
-      <li><strong>v18</strong> — Ordem de execução em Previs e melhorias de navegação.</li>
+      <li><strong>v0.1</strong> — Estrutura inicial e primeiros protótipos.</li>
+      <li><strong>v0.2</strong> — Procedimentos técnicos, progresso e melhorias de navegação.</li>
+      <li><strong>v0.3</strong> — Sistema de imagens locais, versão bilingue e responsividade.</li>
+      <li><strong>v0.4</strong> — Evolução para INFO-ON e expansão da área de Produção Virtual.</li>
+      <li><strong>v0.5</strong> — Renovação visual das áreas de segurança, reservas, limpeza e equipamentos.</li>
+      <li><strong>v0.6</strong> — Reorganização da Videoteca e atualização dos contactos de reservas.</li>
+      <li><strong>v0.7</strong> — Renovação visual da área Reshape.</li>
+      <li><strong>v0.8</strong> — Capturas do Reshape organizadas como passos sequenciais.</li>
     </ul>
   `,
 
@@ -1282,21 +1285,14 @@ const aboutTexts = {
 
     <h3>Version History</h3>
     <ul class="version-list">
-      <li><strong>v1-v4</strong> — Initial structure and prototypes.</li>
-      <li><strong>v5</strong> — First professional release.</li>
-      <li><strong>v6</strong> — Complete procedures.</li>
-      <li><strong>v7</strong> — Navigation improvements.</li>
-      <li><strong>v8</strong> — Work In Progress document.</li>
-      <li><strong>v9</strong> — Dedicated streaming.</li>
-      <li><strong>v10</strong> — Centered structure.</li>
-      <li><strong>v11</strong> — Organizational improvements.</li>
-      <li><strong>v12</strong> — Technical consolidation.</li>
-      <li><strong>v13</strong> — Local image system.</li>
-      <li><strong>v14</strong> — Portuguese / English.</li>
-      <li><strong>v15</strong> — Responsiveness and visual identity.</li>
-      <li><strong>v16</strong> — Evolution to INFO-ON.</li>
-      <li><strong>v17</strong> — Virtual Production categories with dedicated pages and descriptions.</li>
-      <li><strong>v18</strong> — Previs execution order and navigation improvements.</li>
+      <li><strong>v0.1</strong> — Initial structure and first prototypes.</li>
+      <li><strong>v0.2</strong> — Technical procedures, progress tracking and navigation improvements.</li>
+      <li><strong>v0.3</strong> — Local image system, bilingual support and responsive layout.</li>
+      <li><strong>v0.4</strong> — Evolution to INFO-ON and expansion of the Virtual Production area.</li>
+      <li><strong>v0.5</strong> — Visual redesign of safety, bookings, cleaning and equipment areas.</li>
+      <li><strong>v0.6</strong> — Film Library reorganisation and updated booking contacts.</li>
+      <li><strong>v0.7</strong> — Visual redesign of the Reshape area.</li>
+      <li><strong>v0.8</strong> — Reshape screenshots arranged as sequential steps.</li>
     </ul>
   `
 };
@@ -1576,13 +1572,195 @@ function openRule(id) {
   document.getElementById("rule-view").classList.remove("hidden");
   document.getElementById("rule-title").textContent = title;
 
+  if (id === "seguranca") {
+    const safetyIcons = ["person", "route", "cable", "power", "equipment", "lighting", "height", "emergency", "check"];
+    const safetyCopy = currentLanguage === "pt"
+      ? {
+          eyebrow: "Antes de começar",
+          heading: "Trabalhar em segurança é responsabilidade de todos",
+          intro: "Leia estas regras antes de utilizar o estúdio. Mantenha as zonas de circulação livres e comunique imediatamente qualquer risco, dano ou acidente.",
+          emergency: "Em caso de emergência",
+          emergencyText: "Interrompa a atividade, mantenha a calma e siga as indicações dos responsáveis.",
+          footer: "Se não tiver a certeza, pare e peça apoio a um responsável do estúdio."
+        }
+      : {
+          eyebrow: "Before you begin",
+          heading: "Working safely is everyone's responsibility",
+          intro: "Read these rules before using the studio. Keep circulation areas clear and report any risk, damage or accident immediately.",
+          emergency: "In an emergency",
+          emergencyText: "Stop the activity, remain calm and follow the instructions of the responsible staff.",
+          footer: "If you are unsure, stop and ask a member of the studio staff for help."
+        };
+
+    document.getElementById("rule-content").innerHTML = `
+      <section class="safety-overview" aria-labelledby="safety-overview-title">
+        <div class="safety-overview-copy">
+          <p class="safety-kicker">${safetyCopy.eyebrow}</p>
+          <h3 id="safety-overview-title">${safetyCopy.heading}</h3>
+          <p>${safetyCopy.intro}</p>
+        </div>
+        <aside class="safety-emergency">
+          <span class="safety-emergency-icon" aria-hidden="true">!</span>
+          <div><strong>${safetyCopy.emergency}</strong><p>${safetyCopy.emergencyText}</p></div>
+        </aside>
+      </section>
+      <ol class="safety-rules">
+        ${rules.map((item, index) => `
+          <li class="safety-rule-card">
+            <span class="safety-rule-icon safety-icon-${safetyIcons[index]}" aria-hidden="true"></span>
+            <div class="safety-rule-content">${item.replace(/^<strong>\d+\.\s*/, "<strong>")}</div>
+          </li>
+        `).join("")}
+      </ol>
+      <p class="safety-footer"><span aria-hidden="true">✓</span>${safetyCopy.footer}</p>
+    `;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  if (id === "reservas") {
+    const bookingIcons = ["calendar", "details", "confirm", "changes", "schedule", "responsibility", "handover"];
+    const bookingCopy = currentLanguage === "pt"
+      ? {
+          eyebrow: "Planeie com antecedência",
+          heading: "Uma reserva clara evita conflitos e atrasos",
+          intro: "Confirme o espaço, o horário e os equipamentos necessários antes da atividade. O período reservado deve incluir montagem, utilização, desmontagem e organização final.",
+          highlight: "Reserva válida",
+          highlightText: "A reserva só fica confirmada após validação pelo Departamento de Cinema e Artes dos Media.",
+          footer: "Já não precisa do espaço? Cancele ou altere a reserva com a maior antecedência possível."
+        }
+      : {
+          eyebrow: "Plan ahead",
+          heading: "A clear booking prevents conflicts and delays",
+          intro: "Confirm the space, schedule and required equipment before the activity. Your booking must include setup, use, teardown and final organisation.",
+          highlight: "Valid booking",
+          highlightText: "A booking is only confirmed after validation by the Department of Cinema and Media Arts.",
+          footer: "No longer need the space? Cancel or change your booking as early as possible."
+        };
+
+    document.getElementById("rule-content").innerHTML = `
+      <section class="safety-overview booking-overview" aria-labelledby="booking-overview-title">
+        <div class="safety-overview-copy">
+          <p class="safety-kicker">${bookingCopy.eyebrow}</p>
+          <h3 id="booking-overview-title">${bookingCopy.heading}</h3>
+          <p>${bookingCopy.intro}</p>
+        </div>
+        <aside class="safety-emergency booking-highlight">
+          <span class="safety-emergency-icon booking-highlight-icon" aria-hidden="true">✓</span>
+          <div><strong>${bookingCopy.highlight}</strong><p>${bookingCopy.highlightText}</p></div>
+        </aside>
+      </section>
+      <ol class="safety-rules booking-rules">
+        ${rules.map((item, index) => `
+          <li class="safety-rule-card booking-rule-card">
+            <span class="safety-rule-icon booking-rule-icon booking-icon-${bookingIcons[index]}" aria-hidden="true"></span>
+            <div class="safety-rule-content">${item}</div>
+          </li>
+        `).join("")}
+      </ol>
+      <p class="safety-footer booking-footer"><span aria-hidden="true">✓</span>${bookingCopy.footer}</p>
+    `;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  if (id === "limpeza") {
+    const cleaningIcons = ["responsibility", "during", "finish", "equipment", "materials", "waste", "support", "check"];
+    const cleaningCopy = currentLanguage === "pt"
+      ? {
+          eyebrow: "Deixe o espaço pronto",
+          heading: "O estúdio deve ficar preparado para a equipa seguinte",
+          intro: "A limpeza e a organização fazem parte do tempo de utilização. Arrume o material à medida que trabalha e confirme todo o espaço antes de sair.",
+          highlight: "Responsabilidade partilhada",
+          highlightText: "Todos os utilizadores são responsáveis por entregar o estúdio limpo, organizado e em boas condições.",
+          footer: "Antes de sair, faça uma última verificação e comunique imediatamente qualquer dano ou situação pendente."
+        }
+      : {
+          eyebrow: "Leave the space ready",
+          heading: "The studio must be ready for the next team",
+          intro: "Cleaning and organisation are part of your booking time. Put materials away as you work and check the entire space before leaving.",
+          highlight: "Shared responsibility",
+          highlightText: "Every user is responsible for leaving the studio clean, organised and in good condition.",
+          footer: "Before leaving, complete one final check and immediately report any damage or unresolved issue."
+        };
+
+    document.getElementById("rule-content").innerHTML = `
+      <section class="safety-overview cleaning-overview" aria-labelledby="cleaning-overview-title">
+        <div class="safety-overview-copy">
+          <p class="safety-kicker">${cleaningCopy.eyebrow}</p>
+          <h3 id="cleaning-overview-title">${cleaningCopy.heading}</h3>
+          <p>${cleaningCopy.intro}</p>
+        </div>
+        <aside class="safety-emergency cleaning-highlight">
+          <span class="safety-emergency-icon cleaning-highlight-icon" aria-hidden="true">✓</span>
+          <div><strong>${cleaningCopy.highlight}</strong><p>${cleaningCopy.highlightText}</p></div>
+        </aside>
+      </section>
+      <ol class="safety-rules cleaning-rules">
+        ${rules.map((item, index) => `
+          <li class="safety-rule-card cleaning-rule-card">
+            <span class="safety-rule-icon cleaning-rule-icon cleaning-icon-${cleaningIcons[index]}" aria-hidden="true"></span>
+            <div class="safety-rule-content">${item}</div>
+          </li>
+        `).join("")}
+      </ol>
+      <p class="safety-footer cleaning-footer"><span aria-hidden="true">✓</span>${cleaningCopy.footer}</p>
+    `;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  if (id === "equipamentos") {
+    const equipmentIcons = ["responsibility", "request", "collection", "use", "transport", "care", "return", "fault", "external", "check"];
+    const equipmentCopy = currentLanguage === "pt"
+      ? {
+          eyebrow: "Utilize com cuidado",
+          heading: "Cada equipamento é um recurso partilhado",
+          intro: "Verifique o material no levantamento, proteja-o durante a utilização e devolva todos os componentes limpos, completos e prontos para a equipa seguinte.",
+          highlight: "Antes de utilizar",
+          highlightText: "Confirme o estado, os acessórios e o funcionamento. Comunique qualquer dano ou componente em falta antes de começar.",
+          footer: "Nunca tente reparar ou desmontar equipamento. Em caso de anomalia, pare a utilização e contacte o Departamento."
+        }
+      : {
+          eyebrow: "Handle with care",
+          heading: "Every piece of equipment is a shared resource",
+          intro: "Check all equipment on collection, protect it during use and return every component clean, complete and ready for the next team.",
+          highlight: "Before use",
+          highlightText: "Confirm its condition, accessories and operation. Report any damage or missing component before starting.",
+          footer: "Never attempt to repair or disassemble equipment. If a fault occurs, stop using it and contact the Department."
+        };
+
+    document.getElementById("rule-content").innerHTML = `
+      <section class="safety-overview equipment-overview" aria-labelledby="equipment-overview-title">
+        <div class="safety-overview-copy">
+          <p class="safety-kicker">${equipmentCopy.eyebrow}</p>
+          <h3 id="equipment-overview-title">${equipmentCopy.heading}</h3>
+          <p>${equipmentCopy.intro}</p>
+        </div>
+        <aside class="safety-emergency equipment-highlight">
+          <span class="safety-emergency-icon equipment-highlight-icon" aria-hidden="true">!</span>
+          <div><strong>${equipmentCopy.highlight}</strong><p>${equipmentCopy.highlightText}</p></div>
+        </aside>
+      </section>
+      <ol class="safety-rules equipment-rules">
+        ${rules.map((item, index) => `
+          <li class="safety-rule-card equipment-rule-card">
+            <span class="safety-rule-icon equipment-rule-icon equipment-icon-${equipmentIcons[index]}" aria-hidden="true"></span>
+            <div class="safety-rule-content">${item}</div>
+          </li>
+        `).join("")}
+      </ol>
+      <p class="safety-footer equipment-footer"><span aria-hidden="true">✓</span>${equipmentCopy.footer}</p>
+    `;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
   document.getElementById("rule-content").innerHTML = `
     <article class="step-card">
       <div>
         <h3>${title}</h3>
-        <ul class="${id === "seguranca" ? "safety-rules" : ""}">
-          ${rules.map((item) => `<li>${item}</li>`).join("")}
-        </ul>
+        <ul>${rules.map((item) => `<li>${item}</li>`).join("")}</ul>
       </div>
     </article>
   `;

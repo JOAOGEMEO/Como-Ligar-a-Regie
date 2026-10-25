@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INFO-ON | Procedimentos Técnicos</title>
-<link rel="stylesheet" href="style.css?v=18">
+<link rel="stylesheet" href="style.css?v=0.8">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -257,40 +257,36 @@
 <div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaVideotecaTitle">Videoteca</h1>
 <div class="section-header"><div><p class="eyebrow" data-i18n="areaVideoteca">Videoteca</p><h2 data-i18n="areaVideotecaDesc">Coleção audiovisual para consulta</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
-<div class="library-layout">
-<div class="library-info">
-<dl class="library-details">
-<div><dt data-i18n="libraryLocationLabel">Localização</dt><dd>Q.1.7</dd></div>
-<div><dt data-i18n="libraryContactsLabel">Contactos</dt><dd><a href="mailto:joana.vieira@ulusofona.pt">joana.vieira@ulusofona.pt</a><a href="mailto:ines.teixeira@ulusofona.pt">ines.teixeira@ulusofona.pt</a></dd></div>
-</dl>
-<div class="library-use-note">
-<p data-i18n="libraryUseNote">Todos os DVDs disponibilizados destinam-se exclusivamente à visualização, ao estudo e à pesquisa, no âmbito de atividades educativas, académicas e culturais. O seu conteúdo poderá ser utilizado como material de apoio à aprendizagem, à análise e ao desenvolvimento de trabalhos de investigação.</p>
-<p data-i18n="libraryUseRestrictions">Estes materiais não se destinam à comercialização, reprodução, distribuição pública ou utilização com fins lucrativos. A sua consulta deverá ser feita de forma responsável, respeitando os direitos de autor, a propriedade intelectual e a legislação aplicável.</p>
+<div class="library-content-grid">
+<ol class="safety-rules library-cards">
+<li class="safety-rule-card library-card"><span class="safety-rule-icon library-card-icon library-icon-location" aria-hidden="true"></span><div class="safety-rule-content"><strong data-i18n="libraryLocationLabel">Localização</strong><p class="library-location">Q.1.7</p></div></li>
+<li class="safety-rule-card library-card"><span class="safety-rule-icon library-card-icon library-icon-contacts" aria-hidden="true"></span><div class="safety-rule-content"><strong data-i18n="libraryContactsLabel">Contactos</strong><div class="library-contact-links"><a href="mailto:joana.vieira@ulusofona.pt">joana.vieira@ulusofona.pt</a><a href="mailto:ines.teixeira@ulusofona.pt">ines.teixeira@ulusofona.pt</a></div></div></li>
+<li class="safety-rule-card library-card library-use-card"><span class="safety-rule-icon library-card-icon library-icon-use" aria-hidden="true"></span><div class="safety-rule-content"><strong data-i18n="libraryUseTitle">Utilização responsável</strong><p data-i18n="libraryUseNote">Todos os DVDs disponibilizados destinam-se exclusivamente à visualização, ao estudo e à pesquisa, no âmbito de atividades educativas, académicas e culturais. O seu conteúdo poderá ser utilizado como material de apoio à aprendizagem, à análise e ao desenvolvimento de trabalhos de investigação.</p><p data-i18n="libraryUseRestrictions">Estes materiais não se destinam à comercialização, reprodução, distribuição pública ou utilização com fins lucrativos. A sua consulta deverá ser feita de forma responsável, respeitando os direitos de autor, a propriedade intelectual e a legislação aplicável.</p></div></li>
+</ol>
+<figure class="library-visual"><div class="library-image-frame"><img src="assets/imagens/LIB/2.jpeg" alt="Entrada e estantes da Videoteca" onclick="openImage(this.src)"></div><figcaption><strong data-i18n="libraryCollectionCaption">Coleção de filmes</strong><span data-i18n="libraryCollectionDescription">Vista da porta e das estantes com filmes disponíveis para consulta.</span></figcaption></figure>
 </div>
-<p class="library-return-warning"><strong data-i18n="libraryWarningLabel">Aviso:</strong> <span data-i18n="libraryReturnWarning">Qualquer DVD não devolvido no prazo de 30 dias será debitado na conta do aluno pelo valor de cinco vezes o preço original.</span></p>
-</div>
-<div class="library-gallery">
-<figure><figcaption data-i18n="libraryCollectionCaption">Coleção de filmes</figcaption><p class="library-image-description" data-i18n="libraryCollectionDescription">Vista da porta e das estantes com filmes disponíveis para consulta.</p><img src="assets/imagens/LIB/2.jpeg" alt="Outra vista da entrada e das estantes da Film Library"></figure>
-</div>
-</div>
+<aside class="library-bottom-warning"><span class="library-bottom-warning-icon" aria-hidden="true">!</span><div><strong data-i18n="libraryWarningLabel">Aviso:</strong><p data-i18n="libraryReturnWarning">Qualquer DVD não devolvido no prazo de 30 dias será debitado na conta do aluno pelo valor de cinco vezes o preço original.</p></div></aside>
 </section>
 
 <section class="area hidden" id="area-reshape">
 <div class="section-top"><a class="home-logo-link" href="#home" onclick="goHome(); return false;" aria-label="Página inicial / Home"><img src="assets/logos/logo.jpg" alt="INFO-ON" class="section-top-logo"></a></div>
     <h1 class="section-page-title" data-i18n="areaReshape">Reshape</h1>
-<div class="section-header"><div><p class="eyebrow" data-i18n="areaReshape">Reshape</p><h2 data-i18n="areaReshapeDesc">Portal de reservas e gestão dos estúdios</h2><a class="primary-btn reshape-open-link" href="https://secure.ensinolusofona.pt/reshape/" target="_blank" rel="noopener noreferrer" data-i18n="reshapeOpenPortal">Abrir portal Reshape</a></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="section-header"><div><p class="eyebrow" data-i18n="areaReshape">Reshape</p><h2 data-i18n="areaReshapeDesc">Portal de reservas e gestão dos estúdios</h2></div><button class="small-btn" onclick="goHome()" data-i18n="backHome">← Voltar</button></div>
+<div class="reshape-layout">
+<aside class="reshape-access-card"><span class="reshape-access-icon" aria-hidden="true"></span><p class="reshape-kicker" data-i18n="reshapeAccessEyebrow">Acesso online</p><h3 data-i18n="reshapeAccessTitle">Faça a sua reserva no Reshape</h3><p data-i18n="reshapeAccessText">Consulte a disponibilidade e faça a gestão de requisições de estúdios, salas e equipamentos através do portal.</p><a class="primary-btn reshape-open-link" href="https://secure.ensinolusofona.pt/reshape/" target="_blank" rel="noopener noreferrer"><span data-i18n="reshapeOpenPortal">Abrir portal Reshape</span><span aria-hidden="true">↗</span></a></aside>
 <div class="reshape-gallery">
-<figure><figcaption data-i18n="reshapeLoginCaption">Login</figcaption><p class="reshape-image-description" data-i18n="reshapeLoginDescription">Acesso protegido ao portal Reshape.</p><img src="assets/imagens/Reshape/1.png" alt="Ecrã de login do portal Reshape"></figure>
-<figure><figcaption data-i18n="reshapeOverviewCaption">Página geral</figcaption><p class="reshape-image-description" data-i18n="reshapeOverviewDescription">Área para consultar e gerir requisições de salas e equipamentos.</p><img src="assets/imagens/Reshape/2.png" alt="Página geral de requisições do Reshape"></figure>
+<figure class="reshape-shot"><span class="reshape-step-label"><span data-i18n="reshapeStep">Passo</span> 1</span><div class="reshape-shot-image"><img src="assets/imagens/Reshape/1.png" alt="Ecrã de login do portal Reshape" onclick="openImage(this.src)"></div><figcaption><strong data-i18n="reshapeLoginCaption">Login</strong><span data-i18n="reshapeLoginDescription">Acesso protegido ao portal Reshape.</span></figcaption></figure>
+<figure class="reshape-shot"><span class="reshape-step-label"><span data-i18n="reshapeStep">Passo</span> 2</span><div class="reshape-shot-image"><img src="assets/imagens/Reshape/2.png" alt="Página geral de requisições do Reshape" onclick="openImage(this.src)"></div><figcaption><strong data-i18n="reshapeOverviewCaption">Página geral</strong><span data-i18n="reshapeOverviewDescription">Área para consultar e gerir requisições de salas e equipamentos.</span></figcaption></figure>
+</div>
 </div>
 </section>
 
 <section class="suggestions" id="sugestoes"><div class="suggestions-card"><p class="eyebrow" data-i18n="contribute">Contribuir</p><h2 data-i18n="suggestionsTitle">Sugestões e correções</h2><p class="suggestion-text" data-i18n="suggestionsText">Este documento encontra-se em desenvolvimento contínuo. Para sugerir melhorias ou reportar erros, contacte:</p><p class="email">joao.aguiar@ulusofona.pt</p></div></section>
-<footer class="footer"><button class="version-badge" onclick="openAboutModal()">INFO-ON v18</button></footer>
+<footer class="footer"><button class="version-badge" onclick="openAboutModal()">INFO-ON v0.8</button></footer>
 </main>
 
 <div id="imageModal" class="image-modal"><span class="close-modal" onclick="closeImage()">×</span><img id="modalImage" class="modal-image"></div>
-<div id="aboutModal" class="about-modal"><div class="about-content"><button class="close-about" onclick="closeAboutModal()">×</button><div class="about-header"><h2>INFO-ON v18</h2><div class="language-switcher about-language"><button id="about-pt" onclick="setAboutLanguage('pt')">PT</button><button id="about-en" onclick="setAboutLanguage('en')">EN</button></div></div><div id="about-content"></div></div></div>
-<script src="script.js?v=3"></script>
+<div id="aboutModal" class="about-modal"><div class="about-content"><button class="close-about" onclick="closeAboutModal()">×</button><div class="about-header"><h2>INFO-ON v0.8</h2><div class="language-switcher about-language"><button id="about-pt" onclick="setAboutLanguage('pt')">PT</button><button id="about-en" onclick="setAboutLanguage('en')">EN</button></div></div><div id="about-content"></div></div></div>
+<script src="script.js?v=0.8"></script>
 </body>
 </html>

@@ -402,10 +402,10 @@ h3 {
 
 .library-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 440px);
+    grid-template-columns: minmax(0, 380px);
     justify-content: center;
     width: 100%;
-    max-width: 440px;
+    max-width: 380px;
     margin: 0 auto
 }
 
@@ -446,6 +446,14 @@ h3 {
     color: var(--muted);
     font-size: 15px;
     line-height: 1.5
+}
+
+.library-use-note p {
+    margin: 0
+}
+
+.library-use-note p + p {
+    margin-top: 12px
 }
 
 .library-return-warning {
